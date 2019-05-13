@@ -296,7 +296,7 @@
 
 <div class="section_list w1200">
     <%--<div class="title_h1" style="position:relative;">
-        &111111111111111lt;%&ndash;<h1 class="hospital_title">西京医院</h1>
+        &lt;%&ndash;<h1 class="hospital_title">西京医院</h1>
         <span>三级甲等</span>
         <span>公立</span>&ndash;%&gt;
 
