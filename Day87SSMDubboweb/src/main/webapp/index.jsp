@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -491,13 +492,14 @@
             <h3 class="title_h2">寻找医生就诊</h3>
             <div class="search_doctor clearfix">
                 <ul class="search_ul">
-                    <li id="search_li1" class="on"><a href="javascript:;" target="_self">按科室找</a></li>
+                    <li id="search_li1" class="on"><a href="getAllDepartment" target="_self">按科室找</a></li>
                     <li id="search_li2" ><a href="javascript:;" target="_self">按擅长疾病寻找</a></li>
                 </ul>
             </div>
             <div class="da  block">
                 <div class="classify_list1">
                     <div class="classify_list clearfix">
+
                         <p class="left">内科</p>
                         <ul class="list_ul right">
                             <li> <a class="color_333" href="/hospital_1302/department_6.html" title="神经内科">神经内科</a> <span class="color_999">(39人)</span> <span class="good_reputation">1471好评</span> </li>
