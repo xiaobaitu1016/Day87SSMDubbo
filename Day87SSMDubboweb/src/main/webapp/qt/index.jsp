@@ -526,7 +526,7 @@
 
 
                         </ul>
-                        <a href="/hospital_1302/department_no5.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“内科”相关科室</a>
+                       <%-- <a href="/hospital_1302/department_no5.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“内科”相关科室</a>--%>
                     </div>
 
 
@@ -556,7 +556,7 @@
 
 
                         </ul>
-                        <a href="/hospital_1302/department_no10.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“外科”相关科室</a>
+                       <%-- <a href="/hospital_1302/department_no10.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“外科”相关科室</a>--%>
                     </div>
 
 

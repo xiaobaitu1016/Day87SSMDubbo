@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Day87SSMDubbocontext/Day87SSMDubbocontextservice" />
     <file type="web" url="file://$PROJECT_DIR$/Day87SSMDubboweb" />
+    <type id="Spring" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
