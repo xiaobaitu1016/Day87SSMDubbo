@@ -308,7 +308,7 @@
             <li><a class="hover"         href="/index.jsp"             target="_self">概览</a></li>
             <li><a          href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
             <li><a          href="/qt/guahao.jsp"          target="_self">预约挂号</a></li>
-            <li><a          href="/qt/keshi.jsp" target="_self">医院科室</a></li>
+            <li><a          href="/getAllDepart" target="_self">医院科室</a></li>
             <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
             <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
             <li><a          href="/qt/dayi.jsp"  target="_self">患者答疑</a></li>

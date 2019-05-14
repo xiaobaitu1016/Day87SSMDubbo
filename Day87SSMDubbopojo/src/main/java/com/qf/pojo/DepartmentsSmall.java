@@ -55,4 +55,15 @@ public class DepartmentsSmall implements Serializable {
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
     }
+
+    @Override
+    public String toString () {
+        return "DepartmentsSmall{" +
+                "dsid=" + dsid +
+                ", dbid=" + dbid +
+                ", dsname='" + dsname + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", illnessList=" + illnessList +
+                '}';
+    }
 }

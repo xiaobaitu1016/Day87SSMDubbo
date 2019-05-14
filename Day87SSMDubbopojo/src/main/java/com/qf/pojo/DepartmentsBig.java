@@ -45,4 +45,14 @@ public class DepartmentsBig implements Serializable {
     public void setRemarks(String remarks) {
         this.remarks = remarks == null ? null : remarks.trim();
     }
+
+    @Override
+    public String toString () {
+        return "DepartmentsBig{" +
+                "dbid=" + dbid +
+                ", dbname='" + dbname + '\'' +
+                ", remarks='" + remarks + '\'' +
+                ", departmentsSmallList=" + departmentsSmallList +
+                '}';
+    }
 }
