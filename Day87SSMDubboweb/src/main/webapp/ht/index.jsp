@@ -7,113 +7,214 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>黄宝康个人搭建的后台管理页面</title>
-    <link rel="stylesheet" href="http://localhost:8088/css/layui.css">
-    <script src="http://localhost:8088/layui.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="http://localhost:8088/css/layui.css" media="all" />
+    <link rel="stylesheet" href="http://localhost:8088/font-awesome/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" href="http://localhost:8088/css/app.css" media="all" />
+    <link rel="stylesheet" href="http://localhost:8088/css/themes/default.css" media="all" id="skin" kit-skin />
 </head>
-<body>
-<div class="layui-layout-admin">
-    <!--头部-->
+
+<body class="kit-theme">
+<div class="layui-layout layui-layout-admin kit-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">
-            西京医院后台管理系统
-        </div>
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="javascript:void(0)">我的待诊</a></li>
+        <div class="layui-logo"><b>西京医院后台管理系统</b></div>
+        <div class="layui-logo kit-logo-mobile"></div>
+        <ul class="layui-nav layui-layout-left kit-nav">
+            <li class="layui-nav-item"><a href="javascript:;">我的就诊</a></li>
             <li class="layui-nav-item"><a href="javascript:;">我的咨询</a></li>
-            <li class="layui-nav-item"><a href="javascript:;">我的评价</a></li>
+            <li class="layui-nav-item"><a href="javascript:;" id="pay">我的评价</a></li>
         </ul>
-        <ul class="layui-nav layui-layout-right">
+        <ul class="layui-nav layui-layout-right kit-nav">
             <li class="layui-nav-item">
-                <a href=""><img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img">Huang BaoKang</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
+                <a href="javascript:;">
+                    <i class="layui-icon">&#xe63f;</i> 皮肤
+                </a>
+                <dl class="layui-nav-child skin">
+                    <dd><a href="javascript:;" data-skin="default" style="color:#393D49;"><i class="layui-icon">&#xe658;</i> 默认</a></dd>
+                    <dd><a href="javascript:;" data-skin="orange" style="color:#ff6700;"><i class="layui-icon">&#xe658;</i> 橘子橙</a></dd>
+                    <dd><a href="javascript:;" data-skin="green" style="color:#00a65a;"><i class="layui-icon">&#xe658;</i> 原谅绿</a></dd>
+                    <dd><a href="javascript:;" data-skin="pink" style="color:#FA6086;"><i class="layui-icon">&#xe658;</i> 少女粉</a></dd>
+                    <dd><a href="javascript:;" data-skin="blue.1" style="color:#00c0ef;"><i class="layui-icon">&#xe658;</i> 天空蓝</a></dd>
+                    <dd><a href="javascript:;" data-skin="red" style="color:#dd4b39;"><i class="layui-icon">&#xe658;</i> 枫叶红</a></dd>
                 </dl>
             </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img"> Van
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" kit-target data-options="{url:'basic.html',icon:'&#xe658;',title:'基本资料',id:'966'}"><span>基本资料</span></a></dd>
+                    <dd><a href="javascript:;">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
         </ul>
     </div>
 
-    <!--左侧-->
-    <div class="layui-side layui-bg-black">
+    <div class="layui-side layui-bg-black kit-side">
         <div class="layui-side-scroll">
-            <ul class="layui-nav layui-nav-tree" lay-filter="hbkNavbar">
+            <div class="kit-side-fold"><i class="fa fa-navicon" aria-hidden="true"></i></div>
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">基本元素</a>
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 患者信息</span></a>
                     <dl class="layui-nav-child">
-                        <dd lay-id="111"><a href="javascript:;" data-options="{url:'test.html',title:'表格'}">表格</a></dd>
-                        <dd><a href="">表单</a></dd>
-                        <dd><a href="">导航栏</a></dd>
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'http://localhost:8088/ht/sufferList.jsp',icon:'&#xe6c6;',title:'患者信息列表',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 患者信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'><i class="fa fa-user" aria-hidden="true"></i><span> 待诊患者信息</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'><i class="layui-icon">&#xe628;</i><span> 患者信息处理</span></a>
+                        </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="">组件</a>
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 医生信息</span></a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">Navbar</a></dd>
-                        <dd><a href="">Tab</a></dd>
-                        <dd><a href="">OneLevel</a></dd>
-                        <dd><a href="">app.js主入口</a></dd>
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 医生信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 医生信息修改</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'>
+                                <i class="layui-icon">&#xe628;</i><span> 医生评价列表</span>
+                            </a>
+                        </dd>
                     </dl>
                 </li>
+
                 <li class="layui-nav-item">
-                    <a href="">表格</a>
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 科室信息</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 一级科室信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 二级科室信息列表</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'>
+                                <i class="layui-icon">&#xe628;</i><span> 科室排班表</span>
+                            </a>
+                        </dd>
+                    </dl>
                 </li>
+
                 <li class="layui-nav-item">
-                    <a href="">表单</a>
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 患者咨询</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 待回复信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 咨询信息列表</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 疾病信息</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 疾病信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 疾病信息管理</span>
+                            </a>
+                        </dd>
+                    </dl>
                 </li>
             </ul>
         </div>
     </div>
-
-    <!--中间主体-->
     <div class="layui-body" id="container">
-        <div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
-            <ul class="layui-tab-title">
-                <li class="layui-this">首页</li>
-            </ul>
-            <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">首页内容</div>
-            </div>
-        </div>
+
+        <%--<div style="padding: 15px;"><i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop">&#xe63e;</i> 请稍等...</div>--%>
     </div>
 
-    <!--底部-->
     <div class="layui-footer">
-        <center>黄宝康版权所有&copy;Tel:18679758769</center>
+        <!-- 底部固定区域 -->
+        2017 &copy;
+        <a href="http://kit.zhengjinfan.cn/">kit.zhengjinfan.cn/</a> MIT license
     </div>
 </div>
+<!-- <script type="text/javascript">
+      var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+      document.write(unescape("%3Cspan id='cnzz_stat_icon_1264021086'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264021086%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+  </script> -->
+<script src="http://localhost:8088/layui.js"></script>
 <script>
-    //JavaScript代码区域
-    layui.use('element', function(){
-        var element = layui.element;
-        element.on('nav(hbkNavbar)',function(elem){
-            /*使用DOM操作获取超链接的自定义data属性值*/
-            var options = eval('('+elem.context.children[0].dataset.options+')');
-            var url = options.url;
-            var title = options.title;
-            element.tabAdd('tabs',{
-                title : title,
-                content : '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>',
-                id : '111'
+    var message;
+    layui.config({
+        base: '/js/',
+        version: '1.0.1'
+    }).use(['app', 'message'], function() {
+        var app = layui.app,
+            $ = layui.jquery,
+            layer = layui.layer;
+        //将message设置为全局以便子页面调用
+        message = layui.message;
+        //主入口
+        app.set({
+            type: 'iframe'
+        }).init();
+        /*$('#pay').on('click', function() {
+            layer.open({
+                title: false,
+                type: 1,
+                content: '<img src="http://localhost:8088/images/pay.png" />',
+                area: ['500px', '250px'],
+                shadeClose: true
             });
+        });*/
+        $('dl.skin > dd').on('click', function() {
+            var $that = $(this);
+            var skin = $that.children('a').data('skin');
+            switchSkin(skin);
         });
-        /*使用下面的方式需要引用jquery*/
-        /* $('.layui-nav-child a').click(function () {
-             var options = eval('('+$(this).data('options')+')');
-             var url = options.url;
-             var title = options.title;
-             element.tabAdd('tabs',{
-                 title : title,
-                 content : '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>'
-             });
-         });*/
+        var setSkin = function(value) {
+                layui.data('kit_skin', {
+                    key: 'skin',
+                    value: value
+                });
+            },
+            getSkinName = function() {
+                return layui.data('kit_skin').skin;
+            },
+            switchSkin = function(value) {
+                var _target = $('link[kit-skin]')[0];
+                _target.href = _target.href.substring(0, _target.href.lastIndexOf('/') + 1) + value + _target.href.substring(_target.href.lastIndexOf('.'));
+                setSkin(value);
+
+            },
+            initSkin = function() {
+                var skin = getSkinName();
+                switchSkin(skin === undefined ? 'default' : skin);
+            }();
     });
 </script>
 </body>
+
 </html>

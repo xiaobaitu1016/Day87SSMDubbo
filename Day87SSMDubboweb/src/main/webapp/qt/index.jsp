@@ -6,7 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
 <html>
 <head>
     <meta charset="utf-8">
@@ -493,7 +494,7 @@
             <h3 class="title_h2">寻找医生就诊</h3>
             <div class="search_doctor clearfix">
                 <ul class="search_ul">
-                    <li id="search_li1" class="on"><a href="getAllDepartment" target="_self">按科室找</a></li>
+                    <li id="search_li1" class="on"><a href="/getAllDepartment" target="_self">按科室找</a></li>
                     <li id="search_li2" ><a href="javascript:;" target="_self">按擅长疾病寻找</a></li>
                 </ul>
             </div>
@@ -501,9 +502,10 @@
                 <div class="classify_list1">
                     <div class="classify_list clearfix">
 
+
                         <p class="left">内科</p>
+
                         <ul class="list_ul right">
-                            <li> <a class="color_333" href="/hospital_1302/department_6.html" title="神经内科">神经内科</a> <span class="color_999">(39人)</span> <span class="good_reputation">1471好评</span> </li>
 
                             <li> <a class="color_333" href="/hospital_1302/department_1.html" title="消化内科">消化内科</a> <span class="color_999">(59人)</span> <span class="good_reputation">1232好评</span> </li>
 
@@ -516,18 +518,9 @@
                             <li> <a class="color_333" href="/hospital_1302/department_4.html" title="内分泌科">内分泌科</a> <span class="color_999">(14人)</span> <span class="good_reputation">558好评</span> </li>
 
 
-
-
-
-
-
-
-
-
-
-
                         </ul>
-                       <%-- <a href="/hospital_1302/department_no5.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“内科”相关科室</a>--%>
+
+                            <a href="/hospital_1302/department_no5.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“内科”相关科室</a>--%>
                     </div>
 
 

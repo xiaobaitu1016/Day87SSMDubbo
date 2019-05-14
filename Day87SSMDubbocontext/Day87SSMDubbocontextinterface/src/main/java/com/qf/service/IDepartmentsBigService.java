@@ -5,7 +5,9 @@ import com.qf.pojo.DepartmentsBigExample;
 
 import java.util.List;
 
-public interface DepartmentsBigService {
+public interface IDepartmentsBigService {
 
     List<DepartmentsBig> getAllDepartmentsBigByExample(DepartmentsBigExample example);
+
+
 }
