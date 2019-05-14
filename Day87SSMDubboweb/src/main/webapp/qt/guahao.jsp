@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <title>[西京医院预约挂号]怎么网上挂号-专家号-门诊预约挂号平台 – 名医汇</title>
@@ -36,29 +37,7 @@
 <div class="g_top">
     <div class="w1200 g_top_contant" >
         <div class="w1200 g_top_contant" >
-            <!--头部-->
-            <!--已登录-->
-            <div class="fl" style="display: none;" id="isLogin">
-                <p class="welcome fl" style="margin-top: 14px; border: none;"></p>
-                <div class="welcome fl" style="margin: 14px 0 0 10px; display: none">
-                    <a href="javascript:;" id="doctorMsgBox"><i class="consulInfor"></i><p>温馨提示:您有<span style="color:red;" id="unreplynums">0</span>条待回复的咨询，立即查看></p></a>
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--未登录-->
-            <div class="fl" style="display: none;" id="notLogin">
-                <ul class="login-registration">
-                    <li class="on popup_li"> <a href="javascript:jumpLogin();" target="_self">登录</a> </li>
-                    <li class="on zhuce"> <a href="javascript:jumpRegister();" target="_self">注册</a> </li>
-                </ul>
-                <ul class="login-registration">
-                    <li class="on popup_li">
-                        <span class="top_nav_icon"></span>
-                    </li>
-                    <li class="on zhuce"> <a href="javascript:showDoctorRegister();" target="_self">医生注册</a> </li>
-                </ul>
-                <div class="clr"></div>
-            </div>
+
             <div class="fr H_top_nav fnone">
                 <ul id="topRight">
                     <li class="fl jsnavShow"><a href="javascript:;" title="下载APP">APP下载</a>
@@ -334,46 +313,23 @@
     </div>
 </div>
 <div class="illness_classify border">
-    <div class="illness_list clearfix">
-        <div class="inquire_doctor"> <p><a href="/hospital_1302.html" target="_self"><strong class="left" style="font-size: 16px;">西京医院网上预约挂号</strong></a><div class="left disnamepusd"><p><a href="/departments.html">查看全国推荐医院</a></p><p><a href="/doctors.html">查看全国推荐专家</a></p>            </div>
-    </div>
+
     <div class="illness_list clearfix H_link"> <span class="list_h2">一级科室：</span>
         <ul class="list_ul list_list clearfix">
-            <li class="  on"><a href="http://www.mingyihui.net/guahao/hospital_1302/" target="_self">全部</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/2.html" target="_self">妇产科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/7.html" target="_self">儿科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/105.html" target="_self">皮肤性病</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/5.html" target="_self">内科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/13.html" target="_self">耳鼻咽喉头颈科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/10.html" target="_self">外科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/16.html" target="_self">眼科</a></li>
-            <li class=" "><a href="http://www.mingyihui.net/guahao/hospital_1302/17.html" target="_self">中医科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/3.html" target="_self">病理科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/106.html" target="_self">康复医学科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/8.html" target="_self">生殖中心</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/6.html" target="_self">传染病科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/99.html" target="_self">其它科室</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/18.html" target="_self">医学影像学</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/1.html" target="_self">肿瘤科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/23.html" target="_self">男科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/15.html" target="_self">介入医学科</a></li>
-            <li class="con_hidden "><a href="http://www.mingyihui.net/guahao/hospital_1302/22.html" target="_self">麻醉医学科</a></li>
+            <li class="  on"><a href="" target="_self">全部</a></li>
+            <c:forEach items="${small}" var="s">
+               <c:if test="${s.dbid != 4}" >
+                   <li class="  "><a href="" target="_self">${s.dsname}</a></li>
+               </c:if>
+            </c:forEach>
         </ul>
         <a class="unfold border H_open" href="javascript:void(0);" target="_self"> 展开 </a> <a class="unfold border H_close H_contraction" href="javascript:;" target="_self"> 收缩</a>  </div>
     <div class="illness_list clearfix  H_link1"> <span class="list_h2"> 擅长疾病： </span>
         <ul class="list_ul clearfix">
-            <li class="  on"> <a href="http://www.mingyihui.net/guahao/hospital_1302/" target="_self">全部</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/GuanXinBing.html" target="_self">冠心病</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/BaiDianFeng.html" target="_self">白癜风</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/YaoZhuiJianPanTuChuZheng.html" target="_self">腰椎间盘突出症</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/DianXian.html" target="_self">癫痫</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/FenCi.html" target="_self">粉刺</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/RuXianAi.html" target="_self">乳腺癌</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/XueGuanLiu.html" target="_self">血管瘤</a> </li>
-            <li class=" "> <a href="http://www.mingyihui.net/guahao/hospital_1302/YinXieBing.html" target="_self">银屑病</a> </li>
-            <li class="con_hidden "> <a href="http://www.mingyihui.net/guahao/hospital_1302/SeSuZhi.html" target="_self">色素痣</a> </li>
-            <li class="con_hidden "> <a href="http://www.mingyihui.net/guahao/hospital_1302/XinZangBing.html" target="_self">心脏病</a> </li>
-            <li class="con_hidden "> <a href="http://www.mingyihui.net/guahao/hospital_1302/JiZhuCeWan.html" target="_self">脊柱侧弯</a> </li>
+            <li class="  on"> <a href="" target="_self">全部</a> </li>
+            <c:forEach items="${allIllness}" var="a">
+                <li class=" "> <a href="" target="_self">${a.ilname}</a> </li>
+            </c:forEach>
         </ul>
         <a class="unfold border H_open H_open1" href="javascript:void(0);" target="_self"> 展开 </a> <a class="unfold border H_close H_contraction1" href="javascript:;" target="_self"> 收缩 </a>  </div>
 </div>

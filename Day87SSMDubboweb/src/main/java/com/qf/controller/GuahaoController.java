@@ -1,0 +1,31 @@
+package com.qf.controller;
+
+import com.qf.pojo.DepartmentsSmall;
+import com.qf.pojo.Illness;
+import com.qf.service.IDepartmentsSmallService;
+import com.qf.service.IIllnessService;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+@Controller
+public class GuahaoController {
+    @Resource
+    private IDepartmentsSmallService departmentsSmallService;
+
+    @Resource
+    private IIllnessService iIllnessService;
+
+    @GetMapping("/guahao")
+    public String guahao(Model model){
+        List<DepartmentsSmall> alldepartmentsSmall =departmentsSmallService.getAllDepartmentsSmallByExample(null);
+        List<Illness> allIllness = iIllnessService.getAllIllnessByExample(null);
+        model.addAttribute("small",alldepartmentsSmall);
+        model.addAttribute("allIllness",allIllness);
+        return "qt/guahao";
+    }
+}
