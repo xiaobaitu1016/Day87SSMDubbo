@@ -5,6 +5,9 @@
     <id column="dbid" property="dbid" jdbcType="INTEGER" />
     <result column="dbname" property="dbname" jdbcType="VARCHAR" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+
+    <collection property="departmentsSmall" column="dbid" select="com.qf.mapper.DepartmentsSmallMapper.selectByPrimaryKeyDbid" ofType="com.qf.pojo.DepartmentsSmall"/>
+
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

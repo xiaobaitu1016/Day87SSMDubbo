@@ -3,9 +3,10 @@
 <mapper namespace="com.qf.mapper.DepartmentsSmallMapper" >
   <resultMap id="BaseResultMap" type="com.qf.pojo.DepartmentsSmall" >
     <id column="dsid" property="dsid" jdbcType="INTEGER" />
-    <result column="dbid" property="dbid" jdbcType="INTEGER" />
+   <result column="dbid" property="dbid" jdbcType="INTEGER" />
     <result column="dsname" property="dsname" jdbcType="VARCHAR" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -193,4 +194,12 @@
       remarks = #{remarks,jdbcType=VARCHAR}
     where dsid = #{dsid,jdbcType=INTEGER}
   </update>
+
+  <select id="selectByPrimaryKeyDbid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from departments_small
+    where dbid = #{dbid,jdbcType=INTEGER}
+  </select>
+
 </mapper>
