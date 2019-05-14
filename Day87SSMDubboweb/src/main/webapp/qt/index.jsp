@@ -485,8 +485,7 @@
             //     }
             // }
         </script>
-<<<<<<< HEAD
-=======
+
         <!-- 智能推荐有号名医end -->
         <!--患者评价-->
         <!--左边-寻找医生就诊-->
@@ -590,7 +589,7 @@
 
                         </ul>
                     </div>
->>>>>>> origin/master
+
 
 
         <div class="ranking_table"></div>
@@ -679,6 +678,8 @@
 
         </div>
 </div>
+        </div>
+    </div>
 </body>
 </html>
 
