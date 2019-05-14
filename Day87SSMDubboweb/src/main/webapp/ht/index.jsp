@@ -6,89 +6,113 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>layout 后台大布局 - Layui</title>
-    <link rel="stylesheet" href="../src/css/layui.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>黄宝康个人搭建的后台管理页面</title>
+    <link rel="stylesheet" href="http://localhost:8088/css/layui.css">
+    <script src="http://localhost:8088/layui.js"></script>
 </head>
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
+<body>
+<div class="layui-layout-admin">
+    <!--头部-->
     <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <div class="layui-logo">
+            西京医院后台管理系统
+        </div>
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
-                </dl>
-            </li>
+            <li class="layui-nav-item"><a href="javascript:void(0)">我的待诊</a></li>
+            <li class="layui-nav-item"><a href="javascript:;">我的咨询</a></li>
+            <li class="layui-nav-item"><a href="javascript:;">我的评价</a></li>
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
-                </a>
+                <a href=""><img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img">Huang BaoKang</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
         </ul>
     </div>
 
+    <!--左侧-->
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">所有商品</a>
+            <ul class="layui-nav layui-nav-tree" lay-filter="hbkNavbar">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">基本元素</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                        <dd><a href="">超链接</a></dd>
+                        <dd lay-id="111"><a href="javascript:;" data-options="{url:'test.html',title:'表格'}">表格</a></dd>
+                        <dd><a href="">表单</a></dd>
+                        <dd><a href="">导航栏</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="">组件</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Navbar</a></dd>
+                        <dd><a href="">Tab</a></dd>
+                        <dd><a href="">OneLevel</a></dd>
+                        <dd><a href="">app.js主入口</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="">超链接</a></dd>
-                    </dl>
+                    <a href="">表格</a>
                 </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
+                <li class="layui-nav-item">
+                    <a href="">表单</a>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;">内容主体区域</div>
+    <!--中间主体-->
+    <div class="layui-body" id="container">
+        <div class="layui-tab" lay-filter="tabs" lay-allowClose="true">
+            <ul class="layui-tab-title">
+                <li class="layui-this">首页</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">首页内容</div>
+            </div>
+        </div>
     </div>
 
+    <!--底部-->
     <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
+        <center>黄宝康版权所有&copy;Tel:18679758769</center>
     </div>
 </div>
-<script src="../src/layui.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){
         var element = layui.element;
-
+        element.on('nav(hbkNavbar)',function(elem){
+            /*使用DOM操作获取超链接的自定义data属性值*/
+            var options = eval('('+elem.context.children[0].dataset.options+')');
+            var url = options.url;
+            var title = options.title;
+            element.tabAdd('tabs',{
+                title : title,
+                content : '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>',
+                id : '111'
+            });
+        });
+        /*使用下面的方式需要引用jquery*/
+        /* $('.layui-nav-child a').click(function () {
+             var options = eval('('+$(this).data('options')+')');
+             var url = options.url;
+             var title = options.title;
+             element.tabAdd('tabs',{
+                 title : title,
+                 content : '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>'
+             });
+         });*/
     });
 </script>
 </body>
