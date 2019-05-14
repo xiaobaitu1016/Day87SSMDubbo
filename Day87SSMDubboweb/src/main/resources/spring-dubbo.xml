@@ -9,4 +9,5 @@
     <dubbo:registry address="zookeeper://10.12.159.162:2181"/>
     <dubbo:reference interface="com.qf.service.IUserService" id="userServiceImpl"/>
     <dubbo:reference interface="com.qf.service.IDoctorService" id="doctorServiceImpl"/>
+    <dubbo:reference interface="com.qf.service.IIllnessService" id="illnessServiceImpl"/>
 </beans>
