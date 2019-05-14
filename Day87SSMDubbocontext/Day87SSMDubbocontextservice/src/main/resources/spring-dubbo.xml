@@ -46,7 +46,4 @@
 
     <dubbo:service interface="com.qf.service.ISufferService" ref="sufferServiceImpl"/>
 
-
-    <dubbo:service interface="com.qf.service.IIllnessService" ref="illnessServiceImpl"/>
-
 </beans>
