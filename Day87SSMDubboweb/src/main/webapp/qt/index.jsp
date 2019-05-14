@@ -307,8 +307,13 @@
         <ul class="section_nav clearfix">
             <li><a class="hover"         href="/index.jsp"             target="_self">概览</a></li>
             <li><a          href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
+<<<<<<< HEAD
             <li><a          href="/qt/guahao.jsp"          target="_self">预约挂号</a></li>
             <li><a          href="/getAllDepart" target="_self">医院科室</a></li>
+=======
+            <li><a          href="/guahao"          target="_self">预约挂号</a></li>
+            <li><a          href="/qt/keshi.jsp" target="_self">医院科室</a></li>
+>>>>>>> origin/master
             <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
             <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
             <li><a          href="/qt/dayi.jsp"  target="_self">患者答疑</a></li>
@@ -487,114 +492,7 @@
             // }
         </script>
 
-        <!-- 智能推荐有号名医end -->
-        <!--患者评价-->
-        <!--左边-寻找医生就诊-->
-        <div class="office_list">
-            <h3 class="title_h2">寻找医生就诊</h3>
-            <div class="search_doctor clearfix">
-                <ul class="search_ul">
-                    <li id="search_li1" class="on"><a href="/getAllDepartment" target="_self">按科室找</a></li>
-                    <li id="search_li2" ><a href="javascript:;" target="_self">按擅长疾病寻找</a></li>
-                </ul>
-            </div>
-            <div class="da  block">
-                <div class="classify_list1">
-                    <div class="classify_list clearfix">
 
-
-                        <p class="left">内科</p>
-
-                        <ul class="list_ul right">
-
-                            <li> <a class="color_333" href="/hospital_1302/department_1.html" title="消化内科">消化内科</a> <span class="color_999">(59人)</span> <span class="good_reputation">1232好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_2743.html" title="消化外科">消化外科</a> <span class="color_999">(1人)</span> <span class="good_reputation">0好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_68176.html" title="消化介入科">消化介入科</a> <span class="color_999">(1人)</span> <span class="good_reputation">0好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_68386.html" title="内分泌与代谢科">内分泌与代谢科</a> <span class="color_999">(3人)</span> <span class="good_reputation">0好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_4.html" title="内分泌科">内分泌科</a> <span class="color_999">(14人)</span> <span class="good_reputation">558好评</span> </li>
-
-
-                        </ul>
-
-                            <a href="/hospital_1302/department_no5.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“内科”相关科室</a>--%>
-                    </div>
-
-
-
-                    <div class="classify_list clearfix">
-                        <p class="left">外科</p>
-                        <ul class="list_ul right">
-                            <li> <a class="color_333" href="/hospital_1302/department_11.html" title="泌尿外科">泌尿外科</a> <span class="color_999">(27人)</span> <span class="good_reputation">503好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_69.html" title="普外科">普外科</a> <span class="color_999">(1人)</span> <span class="good_reputation">0好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_16.html" title="神经外科">神经外科</a> <span class="color_999">(32人)</span> <span class="good_reputation">762好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_2792.html" title="神经外科 ">神经外科</a> <span class="color_999">(6人)</span> <span class="good_reputation">5好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_102.html" title="疼痛科">疼痛科</a> <span class="color_999">(12人)</span> <span class="good_reputation">40好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_26.html" title="麻醉科">麻醉科</a> <span class="color_999">(5人)</span> <span class="good_reputation">2好评</span> </li>
-
-
-
-
-
-
-
-
-
-
-                        </ul>
-                       <%-- <a href="/hospital_1302/department_no10.html" style="font-size: 14px;color: #000;display: block;clear: both;text-align: right;margin-right: 10%;">更多“外科”相关科室</a>--%>
-                    </div>
-
-
-
-                    <div class="classify_list clearfix">
-                        <p class="left">妇产科</p>
-                        <ul class="list_ul right">
-                            <li> <a class="color_333" href="/hospital_1302/department_19.html" title="妇产科">妇产科</a> <span class="color_999">(33人)</span> <span class="good_reputation">922好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_54.html" title="妇科">妇科</a> <span class="color_999">(2人)</span> <span class="good_reputation">0好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_125.html" title="产科">产科</a> <span class="color_999">(1人)</span> <span class="good_reputation">0好评</span> </li>
-
-
-                        </ul>
-                    </div>
-
-
-
-                    <div class="classify_list clearfix">
-                        <p class="left">儿科</p>
-                        <ul class="list_ul right">
-                            <li> <a class="color_333" href="/hospital_1302/department_34.html" title="儿科">儿科</a> <span class="color_999">(23人)</span> <span class="good_reputation">697好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_231.html" title="小儿科">小儿科</a> <span class="color_999">(1人)</span> <span class="good_reputation">383好评</span> </li>
-
-                            <li> <a class="color_333" href="/hospital_1302/department_463.html" title="小儿骨科">小儿骨科</a> <span class="color_999">(6人)</span> <span class="good_reputation">183好评</span> </li>
-
-
-                        </ul>
-                    </div>
-
-
-
-
-
-
-    </div>
-    <!--右边内容-->
-
-
-      </div>
-
-        </div>
     </div>
         <div class="section_list_right right">
             <!-- 红包 -->

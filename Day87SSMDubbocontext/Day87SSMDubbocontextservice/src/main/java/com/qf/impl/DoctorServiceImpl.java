@@ -13,6 +13,21 @@ public class DoctorServiceImpl implements IDoctorService {
 
     @Resource
     private DoctorMapper doctorMapper;
+
+    @Override
+    public Doctor login(Doctor doctor) {
+        DoctorExample doctorExample = new DoctorExample();
+        DoctorExample.Criteria criteria = doctorExample.createCriteria();
+
+        criteria.andDidEqualTo(doctor.getDid());
+        criteria.andPasswordEqualTo(doctor.getPassword());
+
+        List<Doctor> doctors = doctorMapper.selectByExample(doctorExample);
+        Doctor doctor1 = doctors.get(0);
+
+        return doctor1;
+    }
+
     @Override
     public List<Doctor> getAllDoctor(DoctorExample example) {
         return doctorMapper.selectByExample(example);

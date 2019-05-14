@@ -12,6 +12,9 @@
     <result column="time" property="time" jdbcType="TIMESTAMP" />
     <result column="descr" property="descr" jdbcType="VARCHAR" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <association property="illness" column="ilid" select="com.qf.mapper.IllnessMapper.selectByPrimaryKey" />
+    <association property="doctor" column="did" select="com.qf.mapper.DoctorMapper.selectByPrimaryKey" />
+    <association property="suffer" column="suid" select="com.qf.mapper.SufferMapper.selectByPrimaryKey" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

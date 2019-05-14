@@ -18,6 +18,8 @@ public interface DoctorCommentMapper {
 
     List<DoctorComment> selectByExample(DoctorCommentExample example);
 
+    List<DoctorComment> selectByDid(Integer did);
+
     DoctorComment selectByPrimaryKey(Integer dcid);
 
     int updateByExampleSelective(@Param("record") DoctorComment record, @Param("example") DoctorCommentExample example);

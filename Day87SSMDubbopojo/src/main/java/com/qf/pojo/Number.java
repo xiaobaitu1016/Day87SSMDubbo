@@ -12,9 +12,15 @@ public class Number implements Serializable {
 
     private Integer ilid;
 
+    private Illness illness;
+
     private Integer did;
 
+    private Doctor doctor;
+
     private Integer suid;
+
+    private Suffer suffer;
 
     private String state;
 
@@ -25,6 +31,30 @@ public class Number implements Serializable {
     private String remarks;
 
     private static final long serialVersionUID = 1L;
+
+    public Illness getIllness() {
+        return illness;
+    }
+
+    public void setIllness(Illness illness) {
+        this.illness = illness;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public Suffer getSuffer() {
+        return suffer;
+    }
+
+    public void setSuffer(Suffer suffer) {
+        this.suffer = suffer;
+    }
 
     public Integer getNuid() {
         return nuid;
