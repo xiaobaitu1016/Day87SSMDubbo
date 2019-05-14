@@ -20,6 +20,8 @@ public interface DepartmentsSmallMapper {
 
     DepartmentsSmall selectByPrimaryKey(Integer dsid);
 
+    DepartmentsSmall selectByPrimaryKeyDbid(Integer dbid);
+
     int updateByExampleSelective(@Param("record") DepartmentsSmall record, @Param("example") DepartmentsSmallExample example);
 
     int updateByExample(@Param("record") DepartmentsSmall record, @Param("example") DepartmentsSmallExample example);
