@@ -1,13 +1,18 @@
 package com.qf.pojo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Doctor implements Serializable {
     private Integer did;
 
     private Integer drid;
 
+    private DoctorRole doctorRole;
+
     private Integer dsid;
+
+    private DepartmentsSmall departmentsSmall;
 
     private String dname;
 
@@ -19,7 +24,33 @@ public class Doctor implements Serializable {
 
     private String remarks;
 
+    private List<DocRoleKey> docRoleKeyList;
+
     private static final long serialVersionUID = 1L;
+
+    public DoctorRole getDoctorRole() {
+        return doctorRole;
+    }
+
+    public void setDoctorRole(DoctorRole doctorRole) {
+        this.doctorRole = doctorRole;
+    }
+
+    public DepartmentsSmall getDepartmentsSmall() {
+        return departmentsSmall;
+    }
+
+    public void setDepartmentsSmall(DepartmentsSmall departmentsSmall) {
+        this.departmentsSmall = departmentsSmall;
+    }
+
+    public List<DocRoleKey> getDocRoleKeyList() {
+        return docRoleKeyList;
+    }
+
+    public void setDocRoleKeyList(List<DocRoleKey> docRoleKeyList) {
+        this.docRoleKeyList = docRoleKeyList;
+    }
 
     public Integer getDid() {
         return did;

@@ -7,6 +7,10 @@
     <result column="descr" property="descr" jdbcType="VARCHAR" />
     <result column="suid" property="suid" jdbcType="INTEGER" />
     <result column="time" property="time" jdbcType="TIMESTAMP" />
+    <association property="doctor" column="did" select="com.qf.mapper.DoctorMapper.selectByPrimaryKey" />
+    <association property="suffer" column="suid" select="com.qf.mapper.SufferMapper.selectByPrimaryKey" />
+    <collection property="consultAnswerList" column="cid" ofType="com.qf.pojo.ConsultAnswer"
+                select="com.qf.mapper.ConsultAnswerMapper.selectByCid" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

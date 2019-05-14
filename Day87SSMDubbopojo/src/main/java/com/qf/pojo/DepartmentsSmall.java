@@ -1,6 +1,7 @@
 package com.qf.pojo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class DepartmentsSmall implements Serializable {
     private Integer dsid;
@@ -11,7 +12,17 @@ public class DepartmentsSmall implements Serializable {
 
     private String remarks;
 
+    private List<Illness> illnessList;
+
     private static final long serialVersionUID = 1L;
+
+    public List<Illness> getIllnessList() {
+        return illnessList;
+    }
+
+    public void setIllnessList(List<Illness> illnessList) {
+        this.illnessList = illnessList;
+    }
 
     public Integer getDsid() {
         return dsid;

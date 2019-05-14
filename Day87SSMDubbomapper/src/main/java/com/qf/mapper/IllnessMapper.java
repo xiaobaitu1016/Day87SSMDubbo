@@ -18,6 +18,8 @@ public interface IllnessMapper {
 
     List<Illness> selectByExample(IllnessExample example);
 
+    List<Illness> selectByDsid(Integer dsid);
+
     Illness selectByPrimaryKey(Integer ilid);
 
     int updateByExampleSelective(@Param("record") Illness record, @Param("example") IllnessExample example);

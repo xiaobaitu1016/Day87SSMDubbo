@@ -5,6 +5,7 @@
     <id column="did" property="did" jdbcType="INTEGER" />
     <id column="rid" property="rid" jdbcType="INTEGER" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <association property="rolesList" column="rid" select="com.qf.mapper.RolesMapper.selectByPrimaryKey" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -87,6 +88,12 @@
     from doc_role
     where did = #{did,jdbcType=INTEGER}
       and rid = #{rid,jdbcType=INTEGER}
+  </select>
+  <select id="selectByDid" resultMap="BaseResultMap" parameterType="com.qf.pojo.DocRoleKey" >
+    select
+    <include refid="Base_Column_List" />
+    from doc_role
+    where did = #{did,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="com.qf.pojo.DocRoleKey" >
     delete from doc_role
