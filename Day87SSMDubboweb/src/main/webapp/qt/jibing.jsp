@@ -309,7 +309,7 @@
             <ul class="section_nav clearfix">
                 <li><a          href="/qt/index.jsp"             target="_self">概览</a></li>
                 <li><a          href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
-                <li><a          href="/qt/guahao.jsp"          target="_self">预约挂号</a></li>
+                <li><a          href="/guahao"          target="_self">预约挂号</a></li>
                 <li><a         href="/qt/keshi.jsp" target="_self">医院科室</a></li>
                 <li><a       class="hover"    href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
                 <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
@@ -321,7 +321,7 @@
                 <div class="illness_list clearfix  H_link">
                     <div class="list_h2">一级科室：</div>
                     <ul class="list_ul list_list clearfix" >
-                        <li class="  on" style="size: 10px"><a href="http://www.mingyihui.net/hospital_1302/expert.html" target="_self">全部</a></li>
+                        <li class="  on" ><a href="http://www.mingyihui.net/hospital_1302/expert.html" target="_self">全部</a></li>
                         <li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_2.html" target="_self">妇产科</a></li>
                         <li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_7.html" target="_self">儿科</a></li>
                         <li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_105.html" target="_self">皮肤性病</a></li>

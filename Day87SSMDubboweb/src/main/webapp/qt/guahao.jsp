@@ -262,7 +262,7 @@
             <ul class="section_nav clearfix">
                 <li><a          href="/qt/index.jsp"             target="_self">概览</a></li>
                 <li><a          href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
-                <li><a    class="hover"      href="/qt/guahao.jsp"          target="_self">预约挂号</a></li>
+                <li><a    class="hover"      href="/guahao"          target="_self">预约挂号</a></li>
                 <li><a          href="/qt/keshi.jsp" target="_self">医院科室</a></li>
                 <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
                 <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
@@ -347,6 +347,166 @@
             </ul>
         </div>
         <div class="H_doc_con">
+            <c:forEach var="d" items="${allDoctor}" >
+
+                <ul>
+                    <li> <a href=""> <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3242912837,3149823125&fm=26&gp=0.jpg" class="fl H_p" />
+                    </a>
+                        <div class="H_d_down H_d fl"> <a href="">
+                            <h3 class="fl">${d.dname}</h3></a>
+                            <Span class="fl doctor_titles">(${d.doctorRole.drname})
+                                </Span> <small class="clr">${d.departmentsSmall.dsname}</small>
+                            <dl>
+                                <a href=""><dd class="on">${d.doctorIllnessList}</dd></a>
+                            </dl>
+                        </div>
+
+                        <div class="H_t_down H_t fl">
+                            <table>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>周一</th>
+                                    <th>周二</th>
+                                    <th>周三</th>
+                                    <th>周四</th>
+                                    <th>周五</th>
+                                    <th>周六</th>
+                                    <th>周日</th>
+                                </tr>
+
+                                    <tr>
+                                        <td><span>上午1</span></td>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 1}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 1}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 1}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 1}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 1}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                    </tr>
+                                    <tr>
+                                        <td><span>上午1</span></td>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 2}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 2}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 2}">
+                                                <td>${s.did}专家门诊${d.did}</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 2}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 2}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                    </tr>
+                                    <tr>
+                                        <td><span>上午1</span></td>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 3}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 3}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 3}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 3}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 3}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                    </tr>
+                                    <tr>
+                                        <td><span>上午1</span></td>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 4}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 4}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 4}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 4}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 4}">
+                                                <td>专家门诊</td>
+                                            </c:if>
+                                        </c:forEach>
+                                    </tr>
+
+                            </table>
+                        </div>
+                        <div class="H_date_down fr"> <span class="star star2"></span> <span class="starwz">88%</span>
+                            <a href=""> 在线咨询 </a>
+                            <a class="on" href=""  >预约挂号</a>
+                        </div>
+                    </li>
+
+
+
+
+
+
+        </c:forEach>
+        </ul>
+        </div>
+    </div>
+</div>
+
+       <%-- <div class="H_doc_con">
             <ul>
                 <li> <a href="/doctor_225702.html"> <img src="http://www.mingyihui.net/upload/photo/doctor/haodf_pIYBAFImrRGAX8PcAAF9ETMWnmM772_200_200_1.jpg" class="fl H_p" />
                 <div class="H_ran ">NO.1</div>
@@ -359,6 +519,7 @@
                     <dl>
                         <a href="/doctor_225702/comment_GuanXinBing.html"><dd class="on">冠心病(72)</dd></a>                                                                                <a href="/doctor_225702/comment_XinJiGengSe.html"><dd class="on">心肌梗塞(6)</dd></a>                                        <a href="/doctor_225702/comment_XinZangBing.html"><dd class="on">心脏病(4)</dd></a>                                        <div class="clr"> </div>
                     </dl>
+
                 </div>
                 <div class="H_t_down H_t fl">
                     <table>
@@ -405,74 +566,14 @@
                     </table>
                 </div>
                 <div class="H_date_down fr"> <span class="star star2"></span> <span class="starwz">88%</span>
-                    <a href="http://www.mingyihui.net/ask/consult/services_225702.html" target="_self"> 在线咨询 </a>
-                    <a class="on" href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_225702.html');"  >预约挂号</a>                  <!--<a href="javascript:showLoginbox('http://www.mingyihui.net/ask/consult/services.html?ddid=225702');" target="_self" >在线咨询</a><a href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_225702.html');" target="_self"  class="on"  onclick=''>预约挂号</a>--></div>
+                    <a href=""> 在线咨询 </a>
+                    <a class="on" href=""  >预约挂号</a>                  <!--<a href="javascript:showLoginbox('http://www.mingyihui.net/ask/consult/services.html?ddid=225702');" target="_self" >在线咨询</a><a href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_225702.html');" target="_self"  class="on"  onclick=''>预约挂号</a>--></div>
             </li>
-                <li> <a href="/doctor_225708.html"> <img src="http://www.mingyihui.net/upload/images/doctor_default155x155.jpg" class="fl H_p" />
-                    <div class="H_ran ">NO.2</div>
-                </a>
-                    <div class="H_d_down H_d fl"> <a href="/doctor_225708.html">
-                        <h3 class="fl">李伟杰</h3>
-                    </a> <Span class="fl doctor_titles">( 主任医师、教授 )
-                  </Span> <small class="clr">心脏内科</small>
-                        <p class="H_bgt"> 擅长：冠心病、心律失常、高血压、心肌病、瓣膜病 </p>
-                        <dl>
-                            <a href="/doctor_225708/comment_GuanXinBing.html"><dd class="on">冠心病(75)</dd></a>                                                                                <a href="/doctor_225708/comment_XinJiGengSe.html"><dd class="on">心肌梗塞(5)</dd></a>                                        <a href="/doctor_225708/comment_XinZangBing.html"><dd class="on">心脏病(2)</dd></a>                                        <div class="clr"> </div>
-                        </dl>
-                    </div>
-                    <div class="H_t_down H_t fl">
-                        <table>
-                            <tr>
-                                <th>时间</th>
-                                <th>周一</th>
-                                <th>周二</th>
-                                <th>周三</th>
-                                <th>周四</th>
-                                <th>周五</th>
-                                <th>周六</th>
-                                <th>周日</th>
-                            </tr>
-                            <tr>
-                                <td><span>上午</span></td>
-                                <td>专家门诊</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>专家门诊</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><span>下午</span></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
-                                <td><span>夜间</span></td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="H_date_down fr"> <span class="star star1"></span> <span class="starwz">92%</span>
-                        <a href="http://www.mingyihui.net/ask/consult/services_225708.html" target="_self"> 在线咨询 </a>
-                        <a class="on" href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_225708.html');"  >预约挂号</a>                  <!--<a href="javascript:showLoginbox('http://www.mingyihui.net/ask/consult/services.html?ddid=225708');" target="_self" >在线咨询</a><a href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_225708.html');" target="_self"  class="on"  onclick=''>预约挂号</a>--></div>
-                    <div class="clr"> </div>
-                </li>
+
 
             </ul>
         </div>
-</div>
+</div>--%>
     <div class="footer">
         <div class="footer-pd">
             <div class="fl about-myh">
