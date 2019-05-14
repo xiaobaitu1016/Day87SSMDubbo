@@ -18,6 +18,11 @@ public class DoctorController {
     @GetMapping("/getAllDoctor")
     public List<Doctor> getAllDoctor(){
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/master
         return doctorService.getAllDoctor(null);
     }
 }

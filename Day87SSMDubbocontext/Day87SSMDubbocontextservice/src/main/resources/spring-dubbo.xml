@@ -16,4 +16,6 @@
     <dubbo:service interface="com.qf.service.IUserService" ref="userServiceImpl"/>
 
     <dubbo:service interface="com.qf.service.IDoctorService" ref="doctorServiceImpl"/>
+
+    <dubbo:service interface="com.qf.service.IIllnessService" ref="illnessServiceImpl"/>
 </beans>
