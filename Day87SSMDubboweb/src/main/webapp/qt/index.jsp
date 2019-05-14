@@ -585,65 +585,70 @@
 
 
 
-        <div class="ranking_table"></div>
+
 
 
     </div>
     <!--右边内容-->
-    <div class="section_list_right right">
-        <!-- 红包 -->
-        <div style="margin-bottom: 20px;" id="advHospitalIndexRight">
-        </div>
 
-        <!--好评医生排名-->
-        <div class="ranking_tb border">
-            <h3>好评医生排名</h3>
-            <table border="0" >
-                <tr>
-                    <th></th>
-                    <th>医生</th>
-                    <th>所属科室</th>
-                    <th>好评数</th>
-                </tr>
-                <tr>
-                    <td class="color_06bae0">1</td>
-                    <td><a href="/doctor_225702.html" title="吕安林">吕安林</a></td>
-                    <td><a href="/hospital_1302/department_399.html" title="心脏内科">心脏内科</a></td>
-                    <td><a class="gdVot" href="/doctor_225702.html" title="吕安林">119</a></td>
-                </tr>
-                <tr>
-                    <td class="color_06bae0">2</td>
-                    <td><a href="/doctor_225734.html" title="孙秉中">孙秉中</a></td>
-                    <td><a href="/hospital_1302/department_7.html" title="血液内科">血液内科</a></td>
-                    <td><a class="gdVot" href="/doctor_225734.html" title="孙秉中">357</a></td>
-                </tr>
-                <tr>
-                    <td class="color_06bae0">3</td>
-                    <td><a href="/doctor_226002.html" title="刘贺亮">刘贺亮</a></td>
-                    <td><a href="/hospital_1302/department_11.html" title="泌尿外科">泌尿外科</a></td>
-                    <td><a class="gdVot" href="/doctor_226002.html" title="刘贺亮">143</a></td>
-                </tr>
-                <tr>
-                    <td class="color_999">4</td>
-                    <td><a href="/doctor_226129.html" title="李春英">李春英</a></td>
-                    <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
-                    <td><a class="gdVot" href="/doctor_226129.html" title="李春英">687</a></td>
-                </tr>
-                <tr>
-                    <td class="color_999">5</td>
-                    <td><a href="/doctor_226131.html" title="刘斌">刘斌</a></td>
-                    <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
-                    <td><a class="gdVot" href="/doctor_226131.html" title="刘斌">259</a></td>
-                </tr>
-                <tr>
-                    <td class="color_999">6</td>
-                    <td><a href="/doctor_226133.html" title="马翠玲">马翠玲</a></td>
-                    <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
-                    <td><a class="gdVot" href="/doctor_226133.html" title="马翠玲">138</a></td>
-                </tr>
-            </table>
+
+      </div>
+
         </div>
     </div>
+        <div class="section_list_right right">
+            <!-- 红包 -->
+
+
+            <!--好评医生排名-->
+            <div class="ranking_tb border">
+                <h3>好评医生排名</h3>
+                <table border="0" >
+                    <tr>
+                        <th></th>
+                        <th>医生</th>
+                        <th>所属科室</th>
+                        <th>好评数</th>
+                    </tr>
+                    <tr>
+                        <td class="color_06bae0">1</td>
+                        <td><a href="/doctor_225702.html" title="吕安林">吕安林</a></td>
+                        <td><a href="/hospital_1302/department_399.html" title="心脏内科">心脏内科</a></td>
+                        <td><a class="gdVot" href="/doctor_225702.html" title="吕安林">119</a></td>
+                    </tr>
+                    <tr>
+                        <td class="color_06bae0">2</td>
+                        <td><a href="/doctor_225734.html" title="孙秉中">孙秉中</a></td>
+                        <td><a href="/hospital_1302/department_7.html" title="血液内科">血液内科</a></td>
+                        <td><a class="gdVot" href="/doctor_225734.html" title="孙秉中">357</a></td>
+                    </tr>
+                    <tr>
+                        <td class="color_06bae0">3</td>
+                        <td><a href="/doctor_226002.html" title="刘贺亮">刘贺亮</a></td>
+                        <td><a href="/hospital_1302/department_11.html" title="泌尿外科">泌尿外科</a></td>
+                        <td><a class="gdVot" href="/doctor_226002.html" title="刘贺亮">143</a></td>
+                    </tr>
+                    <tr>
+                        <td class="color_999">4</td>
+                        <td><a href="/doctor_226129.html" title="李春英">李春英</a></td>
+                        <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
+                        <td><a class="gdVot" href="/doctor_226129.html" title="李春英">687</a></td>
+                    </tr>
+                    <tr>
+                        <td class="color_999">5</td>
+                        <td><a href="/doctor_226131.html" title="刘斌">刘斌</a></td>
+                        <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
+                        <td><a class="gdVot" href="/doctor_226131.html" title="刘斌">259</a></td>
+                    </tr>
+                    <tr>
+                        <td class="color_999">6</td>
+                        <td><a href="/doctor_226133.html" title="马翠玲">马翠玲</a></td>
+                        <td><a href="/hospital_1302/department_21.html" title="皮肤科">皮肤科</a></td>
+                        <td><a class="gdVot" href="/doctor_226133.html" title="马翠玲">138</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
         <div class="footer">
             <div class="footer-pd">
                 <div class="fl about-myh">
@@ -670,9 +675,6 @@
             </div>
 
         </div>
-</div>
-        </div>
-    </div>
 </body>
 </html>
 
