@@ -374,119 +374,201 @@
                                     <th>周日</th>
                                 </tr>
 
-                                    <tr>
-                                        <td><span>上午1</span></td>
+                                <tr>
+                                    <td><span>上午1</span></td>
+                                    <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 1}">
-                                                <td>${s.did}专家门诊${d.did}</td>
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 1 && s.whichclass == 1}">
+                                                    专家门诊
+                                                </c:if>
                                             </c:if>
                                         </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 1}">
-                                                <td>${s.did}专家门诊${d.did}</td>
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 2 && s.whichclass == 1}">
+                                                    专家门诊
+                                                </c:if>
                                             </c:if>
                                         </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 1}">
-                                                <td>${s.did}专家门诊${d.did}</td>
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 3 && s.whichclass == 1}">
+                                                    专家门诊
+                                                </c:if>
                                             </c:if>
                                         </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 1}">
-                                                <td>${s.did}专家门诊${d.did}</td>
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 4 && s.whichclass == 1}">
+                                                    专家门诊
+                                                </c:if>
                                             </c:if>
                                         </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 1}">
-                                                <td>${s.did}专家门诊${d.did}</td>
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 5 && s.whichclass == 1}">
+                                                    专家门诊
+                                                </c:if>
                                             </c:if>
                                         </c:forEach>
-                                    </tr>
-                                    <tr>
-                                        <td><span>上午1</span></td>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 2}">
-                                                <td>${s.did}专家门诊${d.did}</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 2}">
-                                                <td>${s.did}专家门诊${d.did}</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 2}">
-                                                <td>${s.did}专家门诊${d.did}</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 2}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 2}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                    </tr>
-                                    <tr>
-                                        <td><span>上午1</span></td>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 3}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 3}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 3}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 3}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 3}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                    </tr>
-                                    <tr>
-                                        <td><span>上午1</span></td>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 1 && s.whichclass == 4}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 2 && s.whichclass == 4}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 3 && s.whichclass == 4}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 4 && s.whichclass == 4}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                        <c:forEach var="s" items="${allDoctorSchedule}">
-                                            <c:if test="${s.did == d.did && s.weekday == 5 && s.whichclass == 4}">
-                                                <td>专家门诊</td>
-                                            </c:if>
-                                        </c:forEach>
-                                    </tr>
+                                    </td>
+                                </tr>
 
+                                <tr>
+                                    <td><span>上午2</span></td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 1 && s.whichclass == 2}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 2 && s.whichclass == 2}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 3 && s.whichclass == 2}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 4 && s.whichclass == 2}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 5 && s.whichclass == 2}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>下午1</span></td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 1 && s.whichclass == 3}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 2 && s.whichclass == 3}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 3 && s.whichclass == 3}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 4 && s.whichclass == 3}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 5 && s.whichclass == 3}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><span>下午2</span></td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 1 && s.whichclass == 4}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 2 && s.whichclass == 4}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 3 && s.whichclass == 4}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 4 && s.whichclass == 4}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                    <td>&nbsp;
+                                        <c:forEach var="s" items="${allDoctorSchedule}">
+                                            <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
+                                                <c:if test="${s.weekday == 5 && s.whichclass == 4}">
+                                                    专家门诊
+                                                </c:if>
+                                            </c:if>
+                                        </c:forEach>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                         <div class="H_date_down fr"> <span class="star star2"></span> <span class="starwz">88%</span>
