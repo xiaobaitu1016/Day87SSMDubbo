@@ -8,25 +8,21 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 @Service
 public class IllnessServiceImpl implements IIllnessService {
 
     @Resource
-<<<<<<< HEAD
     private IllnessMapper illnessMapper;
+
 
     @Override
     public List<Illness> getAllIllnessByExample (IllnessExample example) {
-=======
+        return illnessMapper.selectByExample(example);
+    }
 
-    private IllnessMapper illnessMapper;
     @Override
-    public List<Illness> getAllIllness(IllnessExample example) {
->>>>>>> origin/master
+    public List<Illness> getAllIllness (IllnessExample example) {
         return illnessMapper.selectByExample(example);
     }
 }
