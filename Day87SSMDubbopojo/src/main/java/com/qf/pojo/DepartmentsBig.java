@@ -10,16 +10,16 @@ public class DepartmentsBig implements Serializable {
 
     private String remarks;
 
-    private List<DepartmentsSmall> departmentsSmall;
+    private List<DepartmentsSmall> departmentsSmallList;
 
     private static final long serialVersionUID = 1L;
 
-    public List<DepartmentsSmall> getDepartmentsSmall () {
-        return departmentsSmall;
+    public List<DepartmentsSmall> getDepartmentsSmallList() {
+        return departmentsSmallList;
     }
 
-    public void setDepartmentsSmall (List<DepartmentsSmall> departmentsSmall) {
-        this.departmentsSmall = departmentsSmall;
+    public void setDepartmentsSmallList(List<DepartmentsSmall> departmentsSmallList) {
+        this.departmentsSmallList = departmentsSmallList;
     }
 
     public Integer getDbid() {
