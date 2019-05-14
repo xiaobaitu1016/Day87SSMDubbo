@@ -1,10 +1,11 @@
 package com.qf.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ConsultExample {
+public class ConsultExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;
@@ -416,14 +417,14 @@ public class ConsultExample {
         }
     }
 
-    public static class Criteria extends GeneratedCriteria {
+    public static class Criteria extends GeneratedCriteria  implements Serializable{
 
         protected Criteria() {
             super();
         }
     }
 
-    public static class Criterion {
+    public static class Criterion implements Serializable{
         private String condition;
 
         private Object value;
