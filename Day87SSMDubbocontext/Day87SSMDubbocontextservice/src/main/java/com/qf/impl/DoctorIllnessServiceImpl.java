@@ -4,11 +4,12 @@ import com.qf.mapper.DoctorIllnessMapper;
 import com.qf.pojo.DoctorIllness;
 import com.qf.pojo.DoctorIllnessExample;
 import com.qf.service.IDoctorIllnessService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Resource
+@Service
 public class DoctorIllnessServiceImpl implements IDoctorIllnessService {
 
     @Resource

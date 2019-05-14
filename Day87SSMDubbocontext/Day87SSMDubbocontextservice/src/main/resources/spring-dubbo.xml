@@ -24,7 +24,7 @@
 
     <dubbo:service interface="com.qf.service.IDepartmentsBigService" ref="departmentsBigServiceImpl"/>
 
-    <dubbo:service interface="com.qf.service.IDepartmentsSmallService" ref="departmentSmallServiceImpl"/>
+    <dubbo:service interface="com.qf.service.IDepartmentsSmallService" ref="departmentsSmallServiceImpl"/>
 
     <dubbo:service interface="com.qf.service.IDocRoleService" ref="docRoleServiceImpl"/>
 

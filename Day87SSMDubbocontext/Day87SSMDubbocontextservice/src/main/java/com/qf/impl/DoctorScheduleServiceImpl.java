@@ -4,11 +4,12 @@ import com.qf.mapper.DoctorScheduleMapper;
 import com.qf.pojo.DoctorSchedule;
 import com.qf.pojo.DoctorScheduleExample;
 import com.qf.service.IDoctorScheduleService;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-@Resource
+@Service
 public class DoctorScheduleServiceImpl implements IDoctorScheduleService {
 
     @Resource
