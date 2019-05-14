@@ -10,6 +10,11 @@
     <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="praise" property="praise" jdbcType="INTEGER" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <association property="doctorRole" column="drid" select="com.qf.mapper.DoctorRoleMapper.selectByPrimaryKey" />
+    <association property="departmentsSmall" column="dsid" select="com.qf.mapper.DepartmentsSmallMapper.selectByPrimaryKey" />
+
+    <collection property="docRoleKeyList" column="did" ofType="com.qf.pojo.DocRoleKey"
+                select="com.qf.mapper.DocRoleMapper.selectByDid" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

@@ -3,10 +3,11 @@
 <mapper namespace="com.qf.mapper.DepartmentsSmallMapper" >
   <resultMap id="BaseResultMap" type="com.qf.pojo.DepartmentsSmall" >
     <id column="dsid" property="dsid" jdbcType="INTEGER" />
-   <result column="dbid" property="dbid" jdbcType="INTEGER" />
+    <result column="dbid" property="dbid" jdbcType="INTEGER" />
     <result column="dsname" property="dsname" jdbcType="VARCHAR" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
-
+    <collection property="illnessList" column="dsid" ofType="com.qf.pojo.Illness"
+                select="com.qf.mapper.IllnessMapper.selectByDsid" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

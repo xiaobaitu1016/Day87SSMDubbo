@@ -19,6 +19,8 @@ public interface DocRoleMapper {
 
     List<DocRole> selectByExample(DocRoleExample example);
 
+    List<DocRole> selectByDid(Integer did);
+
     DocRole selectByPrimaryKey(DocRoleKey key);
 
     int updateByExampleSelective(@Param("record") DocRole record, @Param("example") DocRoleExample example);

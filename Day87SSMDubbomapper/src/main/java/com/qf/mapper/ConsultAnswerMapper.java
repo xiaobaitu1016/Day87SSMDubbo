@@ -18,6 +18,8 @@ public interface ConsultAnswerMapper {
 
     List<ConsultAnswer> selectByExample(ConsultAnswerExample example);
 
+    List<ConsultAnswer> selectByCid(Integer cid);
+
     ConsultAnswer selectByPrimaryKey(Integer caid);
 
     int updateByExampleSelective(@Param("record") ConsultAnswer record, @Param("example") ConsultAnswerExample example);

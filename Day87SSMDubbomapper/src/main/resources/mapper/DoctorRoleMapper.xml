@@ -6,6 +6,7 @@
     <result column="drname" property="drname" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="DOUBLE" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
