@@ -1,13 +1,8 @@
 package com.qf.controller;
 
-import com.qf.pojo.Consult;
-import com.qf.pojo.DepartmentsBig;
-import com.qf.pojo.DepartmentsSmall;
-import com.qf.pojo.Doctor;
-import com.qf.service.IConsultService;
-import com.qf.service.IDepartmentsBigService;
-import com.qf.service.IDepartmentsSmallService;
-import com.qf.service.IDoctorService;
+import com.qf.pojo.*;
+import com.qf.pojo.Number;
+import com.qf.service.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,6 +44,29 @@ public class TestController {
         return consultService.getAllConsultByExample(null);
     }
 
+    @Resource
+    private IDoctorScheduleService doctorScheduleService;
+
+    @GetMapping("/test5")
+    public List<DoctorSchedule> test5(){
+        return doctorScheduleService.getAllDoctorScheduleByExample(null);
+    }
+
+    @Resource
+    private IDoctorCommentService doctorCommentService;
+
+    @GetMapping("/test6")
+    public List<DoctorComment> test6(){
+        return doctorCommentService.getAllDoctorCommentByExample(null);
+    }
+
+    @Resource
+    private INumberService numberService;
+
+    @GetMapping("/test7")
+    public List<Number> test7(){
+        return numberService.getAllNumberByExample(null);
+    }
 
 
 }

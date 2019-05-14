@@ -26,7 +26,18 @@ public class Doctor implements Serializable {
 
     private List<DocRoleKey> docRoleKeyList;
 
+    private List<DoctorIllness> doctorIllnessList;
+
     private static final long serialVersionUID = 1L;
+
+
+    public List<DoctorIllness> getDoctorIllnessList() {
+        return doctorIllnessList;
+    }
+
+    public void setDoctorIllnessList(List<DoctorIllness> doctorIllnessList) {
+        this.doctorIllnessList = doctorIllnessList;
+    }
 
     public DoctorRole getDoctorRole() {
         return doctorRole;

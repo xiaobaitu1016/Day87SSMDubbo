@@ -8,6 +8,8 @@ public class DoctorComment implements Serializable {
 
     private Integer did;
 
+    private Doctor doctor;
+
     private String doctorManner;
 
     private String degree;
@@ -20,9 +22,27 @@ public class DoctorComment implements Serializable {
 
     private Integer ilid;
 
+    private Illness illness;
+
     private String remarks;
 
     private static final long serialVersionUID = 1L;
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public Illness getIllness() {
+        return illness;
+    }
+
+    public void setIllness(Illness illness) {
+        this.illness = illness;
+    }
 
     public Integer getDcid() {
         return dcid;

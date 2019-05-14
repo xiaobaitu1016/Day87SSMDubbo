@@ -8,6 +8,9 @@
     <result column="weekday" property="weekday" jdbcType="INTEGER" />
     <result column="whichclass" property="whichclass" jdbcType="INTEGER" />
     <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <association property="departmentsSmall" column="dsid" select="com.qf.mapper.DepartmentsSmallMapper.selectByPrimaryKey" />
+    <association property="doctor" column="did" select="com.qf.mapper.DoctorMapper.selectByPrimaryKey" />
+
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >

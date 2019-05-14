@@ -9,11 +9,21 @@ public class DoctorIllness implements Serializable {
 
     private Integer ilid;
 
+    private Illness illness;
+
     private Integer top;
 
     private String remarks;
 
     private static final long serialVersionUID = 1L;
+
+    public Illness getIllness() {
+        return illness;
+    }
+
+    public void setIllness(Illness illness) {
+        this.illness = illness;
+    }
 
     public Integer getDilid() {
         return dilid;

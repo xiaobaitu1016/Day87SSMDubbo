@@ -7,7 +7,11 @@ public class DoctorSchedule implements Serializable {
 
     private Integer dsid;
 
+    private DepartmentsSmall departmentsSmall;
+
     private Integer did;
+
+    private Doctor doctor;
 
     private Integer weekday;
 
@@ -16,6 +20,22 @@ public class DoctorSchedule implements Serializable {
     private String remarks;
 
     private static final long serialVersionUID = 1L;
+
+    public DepartmentsSmall getDepartmentsSmall() {
+        return departmentsSmall;
+    }
+
+    public void setDepartmentsSmall(DepartmentsSmall departmentsSmall) {
+        this.departmentsSmall = departmentsSmall;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
 
     public Integer getDscid() {
         return dscid;
