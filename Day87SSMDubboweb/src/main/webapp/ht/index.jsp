@@ -61,11 +61,11 @@
             <div class="kit-side-fold"><i class="fa fa-navicon" aria-hidden="true"></i></div>
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 患者信息</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                            <a href="javascript:;" kit-target data-options="{url:'http://localhost:8088/ht/sufferList.jsp',icon:'&#xe6c6;',title:'患者信息列表',id:'1'}">
                                 <i class="layui-icon">&#xe6c6;</i><span> 患者信息列表</span></a>
                         </dd>
                         <dd>
@@ -77,37 +77,81 @@
                     </dl>
                 </li>
 
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 医生信息</span></a>
                     <dl class="layui-nav-child">
                         <dd>
                             <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
-                                <i class="layui-icon">&#xe6c6;</i><span> 患者信息列表</span></a>
+                                <i class="layui-icon">&#xe6c6;</i><span> 医生信息列表</span></a>
                         </dd>
                         <dd>
-                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'><i class="fa fa-user" aria-hidden="true"></i><span> 待诊患者信息</span></a>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 医生信息修改</span>
+                            </a>
                         </dd>
                         <dd>
-                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'><i class="layui-icon">&#xe628;</i><span> 患者信息处理</span></a>
+                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'>
+                                <i class="layui-icon">&#xe628;</i><span> 医生评价列表</span>
+                            </a>
                         </dd>
                     </dl>
                 </li>
 
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 组件</span></a>
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 科室信息</span></a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" kit-target data-options="{url:'navbar.html',icon:'&#xe658;',title:'Navbar',id:'6'}"><i class="layui-icon">&#xe658;</i><span> Navbar</span></a></dd>
-                        <dd><a href="javascript:;" kit-target data-options="{url:'tab.html',icon:'&#xe658;',title:'TAB',id:'7'}"><i class="layui-icon">&#xe658;</i><span> Tab</span></a></dd>
-                        <dd><a href="javascript:;" kit-target data-options="{url:'onelevel.html',icon:'&#xe658;',title:'OneLevel',id:'50'}"><i class="layui-icon">&#xe658;</i><span> OneLevel</span></a></dd>
-                        <dd><a href="javascript:;" kit-target data-options="{url:'app.html',icon:'&#xe658;',title:'App',id:'8'}"><i class="layui-icon">&#xe658;</i><span> app.js主入口</span></a></dd>
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 一级科室信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 二级科室信息列表</span>
+                            </a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="导航栏" kit-target data-id='3'>
+                                <i class="layui-icon">&#xe628;</i><span> 科室排班表</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 患者咨询</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 待回复信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 咨询信息列表</span>
+                            </a>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 疾病信息</span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" kit-target data-options="{url:'test.html',icon:'&#xe6c6;',title:'表格',id:'1'}">
+                                <i class="layui-icon">&#xe6c6;</i><span> 疾病信息列表</span></a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="表单" kit-target data-id='2'>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 疾病信息管理</span>
+                            </a>
+                        </dd>
                     </dl>
                 </li>
             </ul>
         </div>
     </div>
     <div class="layui-body" id="container">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;"><i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop">&#xe63e;</i> 请稍等...</div>
+
+        <%--<div style="padding: 15px;"><i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop">&#xe63e;</i> 请稍等...</div>--%>
     </div>
 
     <div class="layui-footer">
