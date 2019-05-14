@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="http://localhost:8088/css/layui.css" media="all" />
     <link rel="stylesheet" href="http://localhost:8088/font-awesome/css/font-awesome.min.css" media="all" />
     <link rel="stylesheet" href="http://localhost:8088/css/app.css" media="all" />
-    <link rel="stylesheet" href="http://localhost:8088/css/themes/default.css" media="all" id="skin" kit-skin />
+    <link rel="stylesheet" href="http://localhost:8088/css  /themes/default.css" media="all" id="skin" kit-skin />
 </head>
 
 <body class="kit-theme">
@@ -25,6 +25,7 @@
         <div class="layui-logo"><b>西京医院后台管理系统</b></div>
         <div class="layui-logo kit-logo-mobile"></div>
         <ul class="layui-nav layui-layout-left kit-nav">
+            <li class="layui-nav-item"><a href="javascript:;">首页</a></li>
             <li class="layui-nav-item"><a href="javascript:;">我的就诊</a></li>
             <li class="layui-nav-item"><a href="javascript:;">我的咨询</a></li>
             <li class="layui-nav-item"><a href="javascript:;" id="pay">我的评价</a></li>
@@ -52,7 +53,7 @@
                     <dd><a href="javascript:;">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
+            <li class="layui-nav-item"><a href="login.jsp"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
         </ul>
     </div>
 
