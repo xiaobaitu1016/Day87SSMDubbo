@@ -1,15 +1,23 @@
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
-  Date: 2019/5/14
-  Time: 10:14
+  Date: 2019/5/15
+  Time: 10:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>【西京医院简介】电话、地址、上班时间、挂号时间 西京医院就医指南 – 名医汇</title>
+    <title>患者答疑</title>
+    <meta name="keywords"    content="西京医院科室列表，西京医院特色科室，西京医院科室介绍，西京医院重点科室，西京医院科室电话" />
+    <meta name="description" content="名医汇为您提供西京医院科室列表，个科室个医生的挂号时间，特色科室、重点科室、西京医院科室电话等。百分百患者真实点评，打造科室医生排行榜，助您找到合适科室医生挂号就诊；" />
+    <meta property="qc:admins" content="353120170365167110516654" />
+    <meta name="chinaz-site-verification" content="081e7651-48c6-4c2f-a569-99321685eab1" />
+    <meta name="360-site-verification"    content="0e5c99f641ba942188b330e4ac953605" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
     <link rel="stylesheet" href="http://www.mingyihui.net/templates/skins/red2017/css/reset.css?v=20171017" />
+    <link rel="stylesheet" type="text/css" href="http://www.mingyihui.net/templates/skins/red2017/css/doctor_details.css?v=20171028" />
     <link rel="stylesheet" href="http://www.mingyihui.net/templates/skins/red2017/css/style.css?v=20170729" />
     <link rel="stylesheet" href="http://www.mingyihui.net/templates/skins/red2017/css/popup.css?v=20170726" />
     <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/jquery-1.9.1.min.js" ></script>
@@ -20,9 +28,9 @@
     <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/common.js?v=20181130"></script>
     <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/message.js?v=20160924"></script>
     <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/stat.js?v=20160924"></script>
-    <meta name="mobile-agent" content="format=html5;url=http://m.mingyihui.net/hospital_1302/index.html">
-    <meta name="mobile-agent" content="format=xhtml;url=http://m.mingyihui.net/hospital_1302/index.html">
-    <link rel="alternate" media="only screen and (max-width: 320px)" href="http://m.mingyihui.net/hospital_1302/index.html">
+    <meta name="mobile-agent" content="format=html5;url=http://m.mingyihui.net/hospital_1302/departments.html">
+    <meta name="mobile-agent" content="format=xhtml;url=http://m.mingyihui.net/hospital_1302/departments.html">
+    <link rel="alternate" media="only screen and (max-width: 320px)" href="http://m.mingyihui.net/hospital_1302/departments.html">
     <meta name="applicable-device" content="pc">
     <meta http-equiv="Cache-Control" content="no-transform "/>
     <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -37,12 +45,12 @@
 </head>
 <script language=javascript> var t_s1 = new Date().getTime(); </script>
 <script src="http://www.mingyihui.net/templates/default/js/uaredirect.js" type="text/javascript"></script>
-<script type="text/javascript">uaredirect("http://m.mingyihui.net/hospital_1302/index.html");</script>
+<script type="text/javascript">uaredirect("http://m.mingyihui.net/hospital_1302/departments.html");</script>
 <base target="_blank">
 <div id="adv_topecshop"></div>
 
-<link rel="stylesheet" type="text/css" href="http://www.mingyihui.net/templates/skins/red2017/css/section_list.css" />
-<link media="screen and (max-width:950px)" href="http://www.mingyihui.net/templates/skins/red2017/css/section_phone.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="http://www.mingyihui.net/templates/skins/red2017/css/section_list.css?v=20160924" />
+<link media="screen and (max-width:640px)" href="http://www.mingyihui.net/templates/skins/red2017/css/section_phone.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/style.js"></script>
 <body>
 <!--导航s-->
@@ -51,28 +59,9 @@
     <div class="w1200 g_top_contant" >
         <div class="w1200 g_top_contant" >
             <!--头部-->
-            <!--已登录-->
-            <div class="fl" style="display: none;" id="isLogin">
-                <p class="welcome fl" style="margin-top: 14px; border: none;"></p>
-                <div class="welcome fl" style="margin: 14px 0 0 10px; display: none">
-                    <a href="javascript:;" id="doctorMsgBox"><i class="consulInfor"></i><p>温馨提示:您有<span style="color:red;" id="unreplynums">0</span>条待回复的咨询，立即查看></p></a>
-                </div>
-                <div class="clr"></div>
-            </div>
-            <!--未登录-->
-            <div class="fl" style="display: none;" id="notLogin">
-                <ul class="login-registration">
-                    <li class="on popup_li"> <a href="javascript:jumpLogin();" target="_self">登录</a> </li>
-                    <li class="on zhuce"> <a href="javascript:jumpRegister();" target="_self">注册</a> </li>
-                </ul>
-                <ul class="login-registration">
-                    <li class="on popup_li">
-                        <span class="top_nav_icon"></span>
-                    </li>
-                    <li class="on zhuce"> <a href="javascript:showDoctorRegister();" target="_self">医生注册</a> </li>
-                </ul>
-                <div class="clr"></div>
-            </div>
+
+
+
             <div class="fr H_top_nav fnone">
                 <ul id="topRight">
                     <li class="fl jsnavShow"><a href="javascript:;" title="下载APP">APP下载</a>
@@ -228,7 +217,7 @@
         <div class="clr"></div>
     </div>
 </div>
-<div class="myh-advertisement" id="advc1"></div>
+
 <!-- 头部导航 -->
 
 <link href="http://www.mingyihui.net/templates/skins/red2017/css/H_05.css?v=20170919" rel="stylesheet" type="text/css" />
@@ -289,73 +278,154 @@
 
 
 
+
+
 <div class="section_list w1200">
     <div class="title_h1" style="position:relative;">
+        <div class="section_list_left left">
+            <ul class="section_nav clearfix">
+                <li><a          href="/qt/index.jsp"             target="_self">概览</a></li>
+                <li><a          href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
+                <li><a          href="/qt/guahao.jsp"          target="_self">预约挂号</a></li>
+                <li><a          href="/getAllDepart" target="_self">医院科室</a></li>
+                <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
+                <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
+                <li><a     class="hover"     href="/qt/dayi.jsp"  target="_self">患者答疑</a></li>
+                <li><a          href="/qt/pingjia.jsp"  target="_self">就诊评价</a></li>
+            </ul>
+
+            <!--患者咨询-->
+            <div class="patient_question">
+                <div> </div>
+                <div class="patient_title clearfix">
+
+
+
+                </div>
+
+
+
+                <ul class="question_ul">
+                    <li> <a href=""> <i class="expert_i"> </i>
+                        <a href="http://www.mingyihui.net/ask/q/consult_417768.html">希望医生帮帮忙吧</a>
+                        <span class="fr ex_c" style="background: white">2016/10/30 20:08</span>
+                        <div class="clr"> </div>
+                        <p> 经常在家，感觉头痛欲裂，左眼不管看什么东西都看不见。 </p>
+                    </a> </li>
+                    <li> <a href=""> <i class="expert_i"> </i>
+                        <a href="http://www.mingyihui.net/ask/q/consult_345217.html">昏迷期间能不能转院</a>
+                        <span class="fr ex_c" style="background: white">2016/08/27 19:07</span>
+                        <div class="clr"> </div>
+                        <p> 脑出血出血量9毫升，昏迷十几个小时，目前转院有危险吗？ </p>
+                    </a> </li>
+
+                </ul>
 
 
 
 
-
-
-    <div class="section_list_left left">
-        <ul class="section_nav clearfix">
-            <li><a          href="/qt/index.jsp"             target="_self">概览</a></li>
-            <li><a   class="hover"       href="/qt/xiangqing.jsp"       target="_self">详细介绍</a></li>
-            <li><a          href="/guahao"          target="_self">预约挂号</a></li>
-            <li><a          href="/qt/keshi.jsp" target="_self">医院科室</a></li>
-            <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
-            <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
-            <li><a          href="/qt/dayi.jsp"  target="_self">患者答疑</a></li>
-            <li><a          href="/qt/pingjia.jsp"  target="_self">就诊评价</a></li>
-        </ul>
-
-
-        <div class="introduction_p">
-
-
-            <br/>
-            <p> 　　　空军军医大学第一附属医院西京医院 坐落在美丽的古都西安，原为为第四军医大学第一附属医院，前身是1939年延安抗战岁月里诞生的中央医院，1954年与原第五军医大学附属医院合并。医院始终秉承践行宗旨、救死扶伤的“使命文化”，勇于争先、不断超越的“创新文化”，精益求精、追求卓越的“精品文化”，公平竞争、和谐发展的“阳光文化”，锐意进取、创新发展，先后获全国百佳医院、全国百姓放心示范医院、全国拥政爱民模范单位、全国抗震救灾英雄集体、全军医院建设先进单位、全军为部队服务先进医院、总后先进师旅团单位和总后先进党委等殊荣。在国内权威部门发布的全国医院综合排名中，医院综合实力跻身全国五强，院名被国家工商总局认定为中国驰名商标。
-                　　西京医院现展开床位3218张，2013年门急诊量341.2万人次，住院收容量14.7万人次，手术量8.5万台次，单日最高门急诊量14691人次。医院于1958年实施国内首例体外循环心内直视手术，1960年成功救治烧伤面积96%、Ш度烧伤面积68%的重度烧伤患者，1986年实施世界首例十指离断再植术，1991年全国首创重组合异种骨移植术，1997年实施全国首例部分活体肝脏移植术，1999年实施全国首例部分活体小肠移植术，2006年实施世界第2例、国内首例“换脸”术，2007年实施世界首例异位辅助性活体肝移植术，2010年实施世界首例“两人异位”劈裂式肝移植手术，2012年实施亚洲首例血型不合亲缘性活体部分小肠移植术，2013年实施世界首例转基因猪-藏酋猴异种异位脾窝辅助性肝部分移植术。医院在肢体严重战创伤系列救治技术、重型颅脑伤检测与救治技术、全胸腔镜下脊柱侧弯矫形手术、胃癌早期诊断防治续贯策略、心血管疾病介入诊疗技术、全胸腔镜下心脏手术方面形成特色优势，先后创造了20余项国内外“首创”、“唯一”、“之最”技术。目前，国家开展的心、肝、肺、肾4项大器官移植项目，医院全部获资格准入。
-                　　医院现有国家级重点学科9个，国家临床重点专科（军队）7个，全军医学专科研究所12个，国家、军队重点实验室5个，建成消化病、骨科、脑科、心血管病、皮肤病、整形等6个“院中院”。拥有中国工程院院士1名，“973”首席科学家3名，军队创新人才工程领军人才1名、拔尖人才5名，长江学者特聘教授8名，国科金杰出青年基金获得者9名，总后“三星”人才23名，23人当选中华医学会主委、副主委，6人在国际学术机构任重要职务。 </p>
         </div>
     </div>
-    <!-- 右边内容 -->
+
+
+
+        </div>
     <div class="section_list_right right">
-        <div id="advHospitalDetailRight" style="margin-bottom: 20px;">
-        </div>
-        <!-- 分院信息end -->
-        <!--最新出诊start-->
-
-        <!--最新出诊end-->
-        <!--医师资料start-->
-        <div class="doctor border "> <a href="/doctor_685379.html"> <img class="on_line" src="http://www.mingyihui.net/templates/skins/red2017/images/on_line.png" alt="专家在线" />
-            <div class="doctor_data clearfix"> <img class="doctor_logo left" src="/images/doctor_default155x155.jpg" alt="黄远桂" />
-                <div class="doctor_name right">
-                    <h3>黄远桂<span class="doctor_titles">( 主任医师、教授 )</span></h3>
-                    <p>西京医院&nbsp;神经内科 <br/>
-                        获得<span>1</span>好评</p>
-                </div>
-            </div>
-        </a>
-            <div class="doctor__introduction">
-                <p>擅长：对神经内科常见及疑难病的诊疗有十分丰富的理论知识和临床实践经...</p>
-            </div>
-            <div class="registration">
-                <a href="javascript:showLoginbox('http://www.mingyihui.net/service/choose_685379.html');" target="_self"  class="registration_a left on"  onclick=''>预约挂号</a>    <a href="javascript:showLoginbox('http://www.mingyihui.net/ask/consult/services.html?ddid=685379');" target="_self"  class="consulting right" >在线咨询</a>
-            </div>
-        </div>
 
 
-    <div class="clr"> </div>
+
+    <!--擅长同类疾病医生start--> <div class="recommend border">
+    <h3> 擅长癫痫医生 </h3>
+    <ul class="recommend_nav">
+        <li id="recommend_li1" class="on"> <a href="javascript:;" target="_self"> 本院 </a> </li>
+        <li id="recommend_li2"> <a href="javascript:;" target="_self"> 本市 </a> </li>
+        <li id="recommend_li3"> <a href="javascript:;" target="_self"> 全国 </a> </li>
+        <div class="clr"> </div>
+    </ul>
+    <ul class="recommend_ul" id="recommend1_ul">
+        <li> <span class="ranking1 fl">NO.1</span>
+            <div class="ranking_right fr"> <a href="/doctor_685379.html"> 本院  黄远桂 </a>
+                <p> <span class="green"> 77% </span> 好评率， <span class="green">37</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.2</span>
+            <div class="ranking_right fr"> <a href="/doctor_225751.html"> 本院  江文 </a>
+                <p> <span class="green"> 92% </span> 好评率， <span class="green">55</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.3</span>
+            <div class="ranking_right fr"> <a href="/doctor_225942.html"> 本院  王彦刚 </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">3</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.4</span>
+            <div class="ranking_right fr"> <a href="/doctor_225750.html"> 本院  刘永红 </a>
+                <p> <span class="green"> 91% </span> 好评率， <span class="green">124</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.5</span>
+            <div class="ranking_right fr"> <a href="/doctor_225758.html"> 本院  韩军良 </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">2</span>人点评 </p>
+            </div>
+        </li>
+    </ul>
+    <ul class="recommend_ul" id="recommend2_ul">
+        <li> <span class="ranking1 fl">NO.1</span>
+            <div class="ranking_right fr"> <a href="/doctor_685379.html">黄远桂</a> <a href="/hospital_1302.html">西京医院 </a>
+                <p> <span class="green"> 77% </span> 好评率， <span class="green">37</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.2</span>
+            <div class="ranking_right fr"> <a href="/doctor_225751.html">江文</a> <a href="/hospital_1302.html">西京医院 </a>
+                <p> <span class="green"> 92% </span> 好评率， <span class="green">55</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.3</span>
+            <div class="ranking_right fr"> <a href="/doctor_225942.html">王彦刚</a> <a href="/hospital_1302.html">西京医院 </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">3</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.4</span>
+            <div class="ranking_right fr"> <a href="/doctor_225750.html">刘永红</a> <a href="/hospital_1302.html">西京医院 </a>
+                <p> <span class="green"> 91% </span> 好评率， <span class="green">124</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.5</span>
+            <div class="ranking_right fr"> <a href="/doctor_225758.html">韩军良</a> <a href="/hospital_1302.html">西京医院 </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">2</span>人点评 </p>
+            </div>
+        </li>
+    </ul>
+    <ul class="recommend_ul" id="recommend3_ul">
+        <li> <span class="ranking1 fl">NO.1</span>
+            <div class="ranking_right fr"> <a href="/doctor_44.html">何裕新</a> <a href="/hospital_13.html">广州军区总医院 </a>
+                <p> <span class="green"> 0% </span> 好评率， <span class="green">0</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.2</span>
+            <div class="ranking_right fr"> <a href="/doctor_1603.html">陈宝田</a> <a href="/hospital_4.html">南方医科大学南方医... </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">1</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking1 fl">NO.3</span>
+            <div class="ranking_right fr"> <a href="/doctor_921.html">何馨</a> <a href="/hospital_12.html">广州市妇女儿童医疗... </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">2</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.4</span>
+            <div class="ranking_right fr"> <a href="/doctor_862.html">陈卓铭</a> <a href="/hospital_15.html">暨南大学附属第一医... </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">1</span>人点评 </p>
+            </div>
+        </li>
+        <li> <span class="ranking2 fl">NO.5</span>
+            <div class="ranking_right fr"> <a href="/doctor_861.html">陈裕斌</a> <a href="/hospital_15.html">暨南大学附属第一医... </a>
+                <p> <span class="green"> 100% </span> 好评率， <span class="green">1</span>人点评 </p>
+            </div>
+        </li>
+    </ul>
 </div>
 
-
-
-
-
-
-
-</div>
+    </div>
     <div class="footer">
         <div class="footer-pd">
             <div class="fl about-myh">
@@ -381,10 +451,7 @@
             </div>
         </div>
 
-
-
-
     </div>
-
+</div>
 </body>
 </html>
