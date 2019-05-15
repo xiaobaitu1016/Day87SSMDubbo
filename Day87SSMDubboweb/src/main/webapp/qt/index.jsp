@@ -312,7 +312,7 @@
             <li><a          href="/qt/jibing.jsp"      target="_self">擅长疾病</a></li>
             <li><a          href="/qt/zhinan.jsp"  target="_self">预约指南</a></li>
             <li><a          href="/qt/dayi.jsp"  target="_self">患者答疑</a></li>
-            <li><a          href="/qt.pingjia.jsp"  target="_self">就诊评价</a></li>
+            <li><a          href="/qt/pingjia.jsp"  target="_self">就诊评价</a></li>
         </ul>
 
 
