@@ -506,25 +506,19 @@
                             <div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226131.html">刘斌</a> </div>
 
                         </li>
-                        >
-
-
-
-
-
-
-
-
 
                     </ul>
                 </div>
-                <div class="H_tra w1200">
-                    <ul>
+                <div class="H_tra w1200" style="font-size: 12px">
+                    <ul >
+                        <li><a>1</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn2.html" target="_self">2</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn3.html" target="_self">3</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn4.html" target="_self">4</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn5.html" target="_self">5</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn2.html" target="_self">下一页</a></li>
+                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn61.html" target="_self">末页</a></li>
 
-
-                        <li class="on"><a>1</a></li><li><a href="http://www.mingyihui.net/hospital_1302/expert_pn2.html" target="_self">2</a></li><li><a href="http://www.mingyihui.net/hospital_1302/expert_pn3.html" target="_self">3</a></li><li><a href="http://www.mingyihui.net/hospital_1302/expert_pn4.html" target="_self">4</a></li><li><a href="http://www.mingyihui.net/hospital_1302/expert_pn5.html" target="_self">5</a></li>
-                        <li><a href="http://www.mingyihui.net/hospital_1302/expert_pn2.html" target="_self">下一页</a></li><li><a href="http://www.mingyihui.net/hospital_1302/expert_pn61.html" target="_self">末页</a></li>
-                        <div class="clr"> </div>
                     </ul>
                 </div>
             </div>

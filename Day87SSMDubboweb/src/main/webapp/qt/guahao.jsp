@@ -348,21 +348,23 @@
         </div>
         <div class="H_doc_con">
             <c:forEach var="d" items="${allDoctor}" >
-
+                 <c:if test="${d.departmentsSmall.dbid != 4}">
                 <ul>
-                    <li> <a href=""> <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3242912837,3149823125&fm=26&gp=0.jpg" class="fl H_p" />
+                    <li> <a href=""> <img src="http://photo.orsoon.com/180610/EPS-180610_425/manyYFHNX9_small.jpg" class="fl H_p" />
                     </a>
                         <div class="H_d_down H_d fl"> <a href="">
                             <h3 class="fl">${d.dname}</h3></a>
                             <Span class="fl doctor_titles">(${d.doctorRole.drname})
                                 </Span> <small class="clr">${d.departmentsSmall.dsname}</small>
                             <dl>
-                                <a href=""><dd class="on">${d.doctorIllnessList}</dd></a>
+                                <c:forEach items="${d.departmentsSmall.illnessList}" var="di">
+                                <a href=""><dd class="on">${di.ilname}</dd></a>
+                                </c:forEach>
                             </dl>
                         </div>
 
                         <div class="H_t_down H_t fl">
-                            <table>
+                            <table  >
                                 <tr>
                                     <th>时间</th>
                                     <th>周一</th>
@@ -370,17 +372,16 @@
                                     <th>周三</th>
                                     <th>周四</th>
                                     <th>周五</th>
-                                    <th>周六</th>
-                                    <th>周日</th>
+
                                 </tr>
 
-                                <tr>
+                                <tr >
                                     <td><span>上午1</span></td>
                                     <td>&nbsp;
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 1 && s.whichclass == 1}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -389,7 +390,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 2 && s.whichclass == 1}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -398,7 +399,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 3 && s.whichclass == 1}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -407,7 +408,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 4 && s.whichclass == 1}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -416,7 +417,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 5 && s.whichclass == 1}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -429,7 +430,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 1 && s.whichclass == 2}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -438,7 +439,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 2 && s.whichclass == 2}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -447,7 +448,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 3 && s.whichclass == 2}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -456,7 +457,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 4 && s.whichclass == 2}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -465,7 +466,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 5 && s.whichclass == 2}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -478,7 +479,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 1 && s.whichclass == 3}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -487,7 +488,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 2 && s.whichclass == 3}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -496,7 +497,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 3 && s.whichclass == 3}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -505,7 +506,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 4 && s.whichclass == 3}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -514,8 +515,8 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 5 && s.whichclass == 3}">
-                                                    专家门诊
-                                                </c:if>
+                                                    出诊
+                                            </c:if>
                                             </c:if>
                                         </c:forEach>
                                     </td>
@@ -527,7 +528,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 1 && s.whichclass == 4}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -536,7 +537,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 2 && s.whichclass == 4}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -545,7 +546,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 3 && s.whichclass == 4}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -554,7 +555,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 4 && s.whichclass == 4}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -563,7 +564,7 @@
                                         <c:forEach var="s" items="${allDoctorSchedule}">
                                             <c:if test="${s.did.equals(d.did) && s.dsid.equals(d.dsid)}">
                                                 <c:if test="${s.weekday == 5 && s.whichclass == 4}">
-                                                    专家门诊
+                                                    出诊
                                                 </c:if>
                                             </c:if>
                                         </c:forEach>
@@ -581,7 +582,7 @@
 
 
 
-
+                    </c:if>
         </c:forEach>
         </ul>
         </div>
