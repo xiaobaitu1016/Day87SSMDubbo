@@ -10,6 +10,7 @@
         <module name="Day87SSMDubbocontextservice" />
         <module name="Day87SSMDubbomapper" />
         <module name="Day87SSMDubbopojo" />
+        <module name="Day87SSMDubboutil" />
         <module name="Day87SSMDubboweb" />
       </profile>
     </annotationProcessing>
