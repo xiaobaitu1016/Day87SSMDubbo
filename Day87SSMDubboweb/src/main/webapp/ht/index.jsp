@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="http://localhost:8088/css/layui.css" media="all" />
     <link rel="stylesheet" href="http://localhost:8088/font-awesome/css/font-awesome.min.css" media="all" />
     <link rel="stylesheet" href="http://localhost:8088/css/app.css" media="all" />
-    <link rel="stylesheet" href="http://localhost:8088/css  /themes/default.css" media="all" id="skin" kit-skin />
+    <link rel="stylesheet" href="http://localhost:8088/css/themes/default.css" media="all" id="skin" kit-skin />
 </head>
 
 <body class="kit-theme">
@@ -46,14 +46,14 @@
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img"> Van
+                    <img src="http://localhost:8088/images/doctor2.jpg" class="layui-nav-img"> ${curDoctor.dname}[${curDoctor.departmentsSmall.dsname}]
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" kit-target data-options="{url:'basic.html',icon:'&#xe658;',title:'基本资料',id:'966'}"><span>基本资料</span></a></dd>
                     <dd><a href="javascript:;">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="login.jsp"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
+            <li class="layui-nav-item"><a href="http://localhost:8088/ht/login.jsp"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
         </ul>
     </div>
 
@@ -66,7 +66,7 @@
                     <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 患者信息</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" kit-target data-options="{url:'http://localhost:8088/ht/sufferList.jsp',icon:'&#xe6c6;',title:'患者信息列表',id:'1'}">
+                            <a href="javascript:;" kit-target data-options="{url:'/toHtSufferList',icon:'&#xe6c6;',title:'患者信息列表',id:'1'}">
                                 <i class="layui-icon">&#xe6c6;</i><span> 患者信息列表</span></a>
                         </dd>
                         <dd>
