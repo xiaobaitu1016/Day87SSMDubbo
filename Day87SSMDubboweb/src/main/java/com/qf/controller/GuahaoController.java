@@ -8,7 +8,7 @@ import com.qf.service.IIllnessService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.annotation.Resource;
@@ -37,6 +37,22 @@ public class GuahaoController {
         model.addAttribute("allDoctorSchedule",allDoctorSchedule);
         model.addAttribute("allDoctor",doctorService.getAllDoctor(null));
         return "qt/guahao";
+    }
+    @GetMapping("/getOneSmallId")
+    @ResponseBody
+    public Object getOneSmallId(int dsid,Model model){
+        DepartmentsSmallExample departmentsSmallExample = new DepartmentsSmallExample();
+        DepartmentsSmallExample.Criteria criteria = departmentsSmallExample.createCriteria();
+        criteria.andDsidEqualTo(dsid);
+
+        List<DepartmentsSmall> allDepartmentsSmallByExample = departmentsSmallService.getAllDepartmentsSmallByExample(departmentsSmallExample);
+
+        DoctorExample doctorExample = new DoctorExample();
+        DoctorExample.Criteria criteria1 = doctorExample.createCriteria();
+        criteria1.andDsidEqualTo(dsid);
+
+
+        return allDepartmentsSmallByExample;
     }
 
 
