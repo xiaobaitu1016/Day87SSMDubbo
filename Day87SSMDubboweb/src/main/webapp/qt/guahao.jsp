@@ -319,7 +319,7 @@
             <li class="  on"><a href="/guahao" target="_self">全部</a></li>
             <c:forEach items="${small}" var="s">
                <c:if test="${s.dbid != 4}" >
-                   <li class="  "><a href="/getOneSmallId?dbid=${s.dbid}" target="_self">${s.dsname}</a></li>
+                   <li class="  "><a href="/getOneSmallId?dbid=${s.dsid}" target="_self">${s.dsname}</a></li>
                </c:if>
             </c:forEach>
         </ul>
