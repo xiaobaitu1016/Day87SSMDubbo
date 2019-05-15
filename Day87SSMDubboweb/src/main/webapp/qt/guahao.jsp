@@ -316,17 +316,17 @@
 
     <div class="illness_list clearfix H_link"> <span class="list_h2">一级科室：</span>
         <ul class="list_ul list_list clearfix">
-            <li class="  on"><a href="" target="_self">全部</a></li>
+            <li class="  on"><a href="/guahao" target="_self">全部</a></li>
             <c:forEach items="${small}" var="s">
                <c:if test="${s.dbid != 4}" >
-                   <li class="  "><a href="" target="_self">${s.dsname}</a></li>
+                   <li class="  "><a href="/getOneSmallId?dbid=${s.dbid}" target="_self">${s.dsname}</a></li>
                </c:if>
             </c:forEach>
         </ul>
         <a class="unfold border H_open" href="javascript:void(0);" target="_self"> 展开 </a> <a class="unfold border H_close H_contraction" href="javascript:;" target="_self"> 收缩</a>  </div>
     <div class="illness_list clearfix  H_link1"> <span class="list_h2"> 擅长疾病： </span>
         <ul class="list_ul clearfix">
-            <li class="  on"> <a href="" target="_self">全部</a> </li>
+
             <c:forEach items="${allIllness}" var="a">
                 <li class=" "> <a href="" target="_self">${a.ilname}</a> </li>
             </c:forEach>
@@ -664,11 +664,11 @@
             </div>
             <div class="fl about-line">
                 <ul class="myh-line">
-                    <li><a href="http://www.mingyihui.net/about.html"rel="nofollow" target="_blank">关于名医汇</a></li>
-                    <li><a href="http://www.mingyihui.net/shenming.html"rel="nofollow" target="_blank">网站声明</a></li>
-                    <li><a href="http://www.mingyihui.net/articlelist_32.html"rel="nofollow" target="_blank">媒体报道</a></li>
-                    <li><a href="http://www.mingyihui.net/zhaopin.html"rel="nofollow" target="_blank">招聘启事</a></li>
-                    <li><a href="http://www.mingyihui.net/partner.html"rel="nofollow" target="_blank">联系我们</a></li>
+                    <li><a href=""rel="nofollow" target="_blank">关于名医汇</a></li>
+                    <li><a href=""rel="nofollow" target="_blank">网站声明</a></li>
+                    <li><a href=""rel="nofollow" target="_blank">媒体报道</a></li>
+                    <li><a href=""rel="nofollow" target="_blank">招聘启事</a></li>
+                    <li><a href=""rel="nofollow" target="_blank">联系我们</a></li>
                 </ul>
                 <p><a href="http://www.miitbeian.gov.cn/" target="_blank" style="color: #999;">备案ICP备12040220号-2</a></p>
                 <p>互联网药品信息服务资格证书 证书编号：（粤）-经营性-2015-0002</p>
