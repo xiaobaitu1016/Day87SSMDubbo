@@ -29,7 +29,7 @@
                     <div class="kit-login-col">
                         <i class="layui-icon">&#xe612;</i>
                         <span class="kit-login-input">
-                <input type="text" name="loginName" lay-verify="required" placeholder="用户名/邮箱/手机号" />
+                <input type="text" id="did" name="loginName" lay-verify="required" placeholder="账号" />
               </span>
                     </div>
                     <div class="kit-login-col"></div>
@@ -38,7 +38,7 @@
                     <div class="kit-login-col">
                         <i class="layui-icon">&#xe64c;</i>
                         <span class="kit-login-input">
-                <input type="password" name="password" lay-verify="required" placeholder="密码" />
+                <input type="password" id="pass" name="password" lay-verify="required" placeholder="密码" />
               </span>
                     </div>
                     <div class="kit-login-col"></div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="kit-login-row">
-                    <button class="layui-btn kit-login-btn" lay-submit="submit" lay-filter="login_hash">登录</button>
+                    <button class="layui-btn kit-login-btn" type="button" id="login" lay-submit="submit" lay-filter="login_hash">登录</button>
                 </div>
                 <div class="kit-login-row" style="margin-bottom:0;">
                     <a href="javascript:;" style="color: rgb(153, 153, 153); text-decoration: none; font-size: 13px;" id="forgot">忘记密码</a>
@@ -70,15 +70,22 @@
             layer.msg('请联系管理员.');
         });
         //监听提交
-        form.on('submit(login_hash)', function(data) {
-            layer.msg(JSON.stringify(data.field));
-            setTimeout(function(){
-                location.href='/';
-            },1000);
+        $('#login').on('click', function() {
+            var sdid = $("#did").val();
+            var spass = $("#pass").val();
 
-            return false;
+            $.post("/loginHtIndex",{did:sdid,pass:spass},function (data) {
+                console.log(data);
+                if (data){
+                    location.href="/loginHtIndexTj";
+                } else {
+                    layer.msg('用户名或密码错误');
+                }
+
+            });
         });
     });
+
 </script>
 </body>
 
