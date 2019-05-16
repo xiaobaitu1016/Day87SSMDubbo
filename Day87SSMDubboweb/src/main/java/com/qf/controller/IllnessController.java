@@ -28,6 +28,9 @@ public class IllnessController {
     @Resource
     private IDoctorService doctorService;
 
+    @Resource
+    private  IDepartmentsBigService iDepartmentsBigService;
+
     @GetMapping("/getAllIllness")
     public String getAllIllness(Model model){
 
@@ -38,6 +41,10 @@ public class IllnessController {
         List<Doctor> allDoctor = doctorService.getAllDoctor(null);
 
         model.addAttribute("allDoctor",allDoctor);
+
+        List<Doctor> allDoctors = doctorService.getAllDoctor(null);
+
+        model.addAttribute("allDoctors",allDoctors);
 
         return "qt/jibing";
     }
@@ -60,8 +67,75 @@ public class IllnessController {
 
         model.addAttribute("allDoctor",allDoctor);
 
+        List<DepartmentsBig> allDepartmentsBigByExample = iDepartmentsBigService.getAllDepartmentsBigByExample(null);
+
+        model.addAttribute("allDepartBig",allDepartmentsBigByExample);
+
+        List<Doctor> allDoctors= doctorService.getAllDoctor(null);
+
+        model.addAttribute("allDoctors",allDoctors);
+
         return "qt/jibing";
     }
 
+    @GetMapping("/selectByDsname")
+    public String selectIllnessByDsname(HttpServletRequest request,Model model){
+        String dsid = request.getParameter("dsid");
+
+        int i = Integer.parseInt(dsid);
+
+        IllnessExample illnessExample=new IllnessExample();
+
+        IllnessExample.Criteria criteria = illnessExample.createCriteria();
+
+        criteria.andDsidEqualTo(i);
+
+        List<Illness> allIllness = iIllnessService.getAllIllness(illnessExample);
+
+        model.addAttribute("allIllness",allIllness);
+
+        List<Doctor> allDoctor = doctorService.getAllDoctor(null);
+
+        model.addAttribute("allDoctor",allDoctor);
+
+        List<Doctor> allDoctors= doctorService.getAllDoctor(null);
+
+        model.addAttribute("allDoctors",allDoctors);
+
+        return "qt/jibing";
+    }
+
+    @GetMapping("/selectByDrname")
+    public String selectByDrname(HttpServletRequest request,Model model){
+        String drid = request.getParameter("drid");
+
+        int i = Integer.parseInt(drid);
+
+        DoctorExample doctorExample=new DoctorExample();
+
+        DoctorExample.Criteria criteria = doctorExample.createCriteria();
+
+        criteria.andDridEqualTo(i);
+
+        List<Doctor> allDoctors= doctorService.getAllDoctor(doctorExample);
+
+        model.addAttribute("allDoctors",allDoctors);
+
+        List<Doctor> allDoctor = doctorService.getAllDoctor(null);
+
+        model.addAttribute("allDoctor",allDoctor);
+
+//        IllnessExample illnessExample=new IllnessExample();
+//
+//        IllnessExample.Criteria criteria1 = illnessExample.createCriteria();
+//
+//        criteria.andDsidEqualTo(i);
+
+        List<Illness> allIllness = iIllnessService.getAllIllness(null);
+
+        model.addAttribute("allIllness",allIllness);
+
+        return "qt/jibing";
+    }
 
 }

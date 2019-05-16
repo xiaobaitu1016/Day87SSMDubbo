@@ -328,26 +328,11 @@
                         <li class="  on" ><a href="http://www.mingyihui.net/hospital_1302/expert.html" target="_self">全部</a></li>
                         <c:forEach items="${allDoctor}" var="d">
                             <c:if test="${d.departmentsSmall.dsid!=7}">
-                        <li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_2.html" target="_self">${d.departmentsSmall.dsname}</a></li>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_7.html" target="_self">儿科</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_105.html" target="_self">皮肤性病</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_5.html" target="_self">内科</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_13.html" target="_self">耳鼻咽喉头颈科</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_10.html" target="_self">外科</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_16.html" target="_self">眼科</a></li>--%>
-                        <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_17.html" target="_self">中医科</a></li>--%>
-                         <%--<c:if test="${allDepart.dbid>3}" >--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_3.html" target="_self">${d.dbname}</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_106.html" target="_self">康复医学科</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_8.html" target="_self">生殖中心</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_6.html" target="_self">传染病科</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_99.html" target="_self">其它科室</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_18.html" target="_self">医学影像学</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_1.html" target="_self">肿瘤科</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_23.html" target="_self">男科</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_15.html" target="_self">介入医学科</a></li>--%>
-                        <%--<li class="con_hidden "><a href="http://www.mingyihui.net/hospital_1302/expert_22.html" target="_self">麻醉医学科</a></li>--%>
-                         <%--</c:if>--%>
+                                <li class=" "><a href="selectByDsname?dsid=${d.dsid}" target="_self">${d.departmentsSmall.dsname}</a></li>
+
+                                <c:if test="${d.departmentsSmall.dsid>9}">
+                                <li class="con_hidden "><a href="selectByDsname?dsid=${d.dsid}" target="_self">${d.departmentsSmall.dsname}</a></li>
+                                </c:if>
                             </c:if>
                         </c:forEach>
                     </ul>
@@ -358,7 +343,7 @@
                     <ul class="list_ul clearfix">
                         <li class="  on"><a href="http://www.mingyihui.net/hospital_1302/expert.html" target="_self">全部</a></li>
                         <c:forEach items="${allDoctor}" var="dr">
-                            <li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_t4.html" target="_self">${dr.doctorRole.drname}</a></li>
+                            <li class=" "><a href="selectByDrname?drid=${dr.doctorRole.drid}" target="_self">${dr.doctorRole.drname}</a></li>
                         </c:forEach>
                         <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_t1.html" target="_self">副主任医师</a></li>--%>
                         <%--<li class=" "><a href="http://www.mingyihui.net/hospital_1302/expert_t3.html" target="_self">主治医师</a></li>--%>
@@ -398,7 +383,7 @@
                         <input type="text" name="ilname" id="txtDisease" value="" placeholder="输入疾病名称搜索好评医生">
                         <input class="submit" type="submit" id="btnSkilled" value="快速查询">
                         <a href="/hospital_1302.html"  target="_self" style="font-size: 14px;color: #333;line-height: 25px;margin-left: 20px;">西京医院预约挂号</a>
-                    <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/quick_search.js?v=20160924"></script>
+                        <script type="text/javascript" src="http://www.mingyihui.net/templates/skins/red2017/js/quick_search.js?v=20160924"></script>
                     </form>
                 </div>
             </div>
@@ -409,114 +394,114 @@
                     </div>
                     <ul>
                         <c:forEach items="${allIllness}" var="i">
-                        <li class="clearfix">
-                            <a href="/hospital_1302/expert_GuanXinBing.html" target="_self"><div class="classify_h3 left hscDisease">
-                                <p class="color_333">${i.ilname}</p>
-                                <span class="color_999" style="background: white ;color: black">(57人) ：</span></div></a>
+                            <li class="clearfix">
+                                <a href="/hospital_1302/expert_GuanXinBing.html" target="_self"><div class="classify_h3 left hscDisease">
+                                    <p class="color_333">${i.ilname}</p>
+                                    <span class="color_999" style="background: white ;color: black">(57人) ：</span></div></a>
 
-                            <c:forEach items="${allDoctor}" var="d">
-                                <c:if test="${d.dsid == i.dsid}">
-                                    <div class="classify_name left">  <a class="color_333" href="/doctor_225914.html">${d.dname}</a><span class="yellow">(${d.doctorRole.drname})</span> </div>
-                                </c:if>
-                            </c:forEach>
+                                <c:forEach items="${allDoctors}" var="d">
+                                    <c:if test="${d.dsid == i.dsid}">
+                                        <div class="classify_name left">  <a class="color_333" href="/doctor_225914.html">${d.dname}</a><span class="yellow">(${d.doctorRole.drname})</span> </div>
+                                    </c:if>
+                                </c:forEach>
 
-                        </li>
+                            </li>
                         </c:forEach>
 
                         <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_BaiDianFeng.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">白癜风</p>--%>
-                                <%--<span class="color_999">(30人) ：</span></div></a>--%>
+                        <%--<a href="/hospital_1302/expert_BaiDianFeng.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">白癜风</p>--%>
+                        <%--<span class="color_999">(30人) ：</span></div></a>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226138.html">廖文俊</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226138.html">廖文俊</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226133.html">马翠玲</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226133.html">马翠玲</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226135.html">高天文</a> </div>--%>
-
-                        <%--</li>--%>
-                        <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_YaoZhuiJianPanTuChuZheng.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">腰椎间盘突出症</p>--%>
-                                <%--<span class="color_999">(44人) ：</span></div></a>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_225963.html">马真胜</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226035.html">朱庆生</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226316.html">吕岩</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_225966.html">雷伟</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226355.html">牟翔</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226135.html">高天文</a> </div>--%>
 
                         <%--</li>--%>
                         <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_DianXian.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">癫痫</p>--%>
-                                <%--<span class="color_999">(10人) ：</span></div></a>--%>
+                        <%--<a href="/hospital_1302/expert_YaoZhuiJianPanTuChuZheng.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">腰椎间盘突出症</p>--%>
+                        <%--<span class="color_999">(44人) ：</span></div></a>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_685379.html">黄远桂</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_225963.html">马真胜</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_225751.html">江文</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226035.html">朱庆生</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_225942.html">王彦刚</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226316.html">吕岩</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_225750.html">刘永红</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_225966.html">雷伟</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_225758.html">韩军良</a> </div>--%>
-
-                        <%--</li>--%>
-                        <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_FenCi.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">粉刺</p>--%>
-                                <%--<span class="color_999">(35人) ：</span></div></a>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226131.html">刘斌</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226148.html">刘玉峰</a> </div>--%>
-
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226134.html">张海龙</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226355.html">牟翔</a> </div>--%>
 
                         <%--</li>--%>
                         <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_RuXianAi.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">乳腺癌</p>--%>
-                                <%--<span class="color_999">(33人) ：</span></div></a>--%>
+                        <%--<a href="/hospital_1302/expert_DianXian.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">癫痫</p>--%>
+                        <%--<span class="color_999">(10人) ：</span></div></a>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226025.html">李海民</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_685379.html">黄远桂</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226296.html">石梅</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_225751.html">江文</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_225987.html">凌瑞</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_225942.html">王彦刚</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226045.html">张洪伟</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_225750.html">刘永红</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_225990.html">边杰芳</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_225758.html">韩军良</a> </div>--%>
 
                         <%--</li>--%>
                         <%--<li class="clearfix">--%>
-                            <%--<a href="/hospital_1302/expert_XueGuanLiu.html" target="_self"><div class="classify_h3 left hscDisease">--%>
-                                <%--<p class="color_333">血管瘤</p>--%>
-                                <%--<span class="color_999">(45人) ：</span></div></a>--%>
+                        <%--<a href="/hospital_1302/expert_FenCi.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">粉刺</p>--%>
+                        <%--<span class="color_999">(35人) ：</span></div></a>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226133.html">马翠玲</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226131.html">刘斌</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226025.html">李海民</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226148.html">刘玉峰</a> </div>--%>
 
-                            <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226131.html">刘斌</a> </div>--%>
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226134.html">张海龙</a> </div>--%>
+
+                        <%--</li>--%>
+                        <%--<li class="clearfix">--%>
+                        <%--<a href="/hospital_1302/expert_RuXianAi.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">乳腺癌</p>--%>
+                        <%--<span class="color_999">(33人) ：</span></div></a>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226025.html">李海民</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226296.html">石梅</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_225987.html">凌瑞</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226045.html">张洪伟</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_225990.html">边杰芳</a> </div>--%>
+
+                        <%--</li>--%>
+                        <%--<li class="clearfix">--%>
+                        <%--<a href="/hospital_1302/expert_XueGuanLiu.html" target="_self"><div class="classify_h3 left hscDisease">--%>
+                        <%--<p class="color_333">血管瘤</p>--%>
+                        <%--<span class="color_999">(45人) ：</span></div></a>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.1</span> <a class="color_333" href="/doctor_226129.html">李春英</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.2</span> <a class="color_333" href="/doctor_226133.html">马翠玲</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="yellow">NO.3</span> <a class="color_333" href="/doctor_226127.html">王刚</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="neworange">NO.4</span> <a class="color_333" href="/doctor_226025.html">李海民</a> </div>--%>
+
+                        <%--<div class="classify_name left"> <span class="neworange">NO.5</span> <a class="color_333" href="/doctor_226131.html">刘斌</a> </div>--%>
 
                         <%--</li>--%>
 
